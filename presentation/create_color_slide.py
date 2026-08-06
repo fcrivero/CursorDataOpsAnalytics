@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import math
+from dataclasses import dataclass
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -42,27 +43,60 @@ def resolve_color(color: str) -> tuple[int, int, int]:
     raise ValueError(f"Unknown color: {color}")
 
 
-def _motif_palette(bg_rgb: tuple[int, int, int]) -> tuple[tuple[int, int, int], tuple[int, int, int], tuple[int, int, int]]:
-    """Return subtle motif colors that stay harmonious with the slide background."""
+@dataclass(frozen=True)
+class MotifPalette:
+    hex_grid: tuple[int, int, int]
+    web_primary: tuple[int, int, int]
+    web_accent: tuple[int, int, int]
+    burst: tuple[int, int, int]
+    burst_alpha: int
+    emblem: tuple[int, int, int]
+    swoosh: tuple[int, int, int]
+    border: tuple[int, int, int]
+    hex_width: int = 2
+    web_width: int = 2
+    border_width: int = 3
+
+
+def _motif_palette(bg_rgb: tuple[int, int, int]) -> MotifPalette:
+    """Return motif colors tuned for visibility on the slide background."""
     r, g, b = bg_rgb
     luminance = 0.299 * r + 0.587 * g + 0.114 * b
 
     if luminance > 200:
-        return (
-            (max(0, r - 18), max(0, g - 18), max(0, b - 12)),
-            (max(0, r - 28), max(0, g - 28), max(0, b - 20)),
-            (max(0, r - 38), max(0, g - 38), max(0, b - 30)),
+        return MotifPalette(
+            hex_grid=(120, 168, 210),
+            web_primary=(130, 130, 138),
+            web_accent=(45, 45, 52),
+            burst=(196, 200, 208),
+            burst_alpha=150,
+            emblem=(88, 98, 112),
+            swoosh=(70, 70, 78),
+            border=(58, 58, 66),
+            hex_width=2,
+            web_width=2,
+            border_width=3,
         )
     if luminance < 55:
-        return (
-            (min(255, r + 22), min(255, g + 22), min(255, b + 22)),
-            (min(255, r + 14), min(255, g + 14), min(255, b + 14)),
-            (min(255, r + 8), min(255, g + 8), min(255, b + 8)),
+        return MotifPalette(
+            hex_grid=(110, 150, 190),
+            web_primary=(170, 170, 178),
+            web_accent=(220, 220, 228),
+            burst=(40, 42, 48),
+            burst_alpha=120,
+            emblem=(150, 158, 170),
+            swoosh=(190, 190, 198),
+            border=(210, 210, 218),
         )
-    return (
-        (min(255, r + 30), min(255, g + 30), min(255, b + 30)),
-        (min(255, r + 18), min(255, g + 18), min(255, b + 18)),
-        (max(0, r - 18), max(0, g - 18), max(0, b - 18)),
+    return MotifPalette(
+        hex_grid=(min(255, r + 40), min(255, g + 40), min(255, b + 55)),
+        web_primary=(max(0, r - 40), max(0, g - 40), max(0, b - 35)),
+        web_accent=(max(0, r - 70), max(0, g - 70), max(0, b - 60)),
+        burst=(min(255, r + 25), min(255, g + 25), min(255, b + 25)),
+        burst_alpha=130,
+        emblem=(max(0, r - 55), max(0, g - 50), max(0, b - 45)),
+        swoosh=(max(0, r - 65), max(0, g - 65), max(0, b - 60)),
+        border=(max(0, r - 75), max(0, g - 75), max(0, b - 70)),
     )
 
 
@@ -81,25 +115,6 @@ def _draw_hexagon(
     draw.polygon(points, outline=color, width=width)
 
 
-def _draw_hex_grid(
-    draw: ImageDraw.ImageDraw,
-    width: int,
-    height: int,
-    color: tuple[int, int, int],
-    radius: float = 34,
-) -> None:
-    """Future Foundation-style hex grid."""
-    step_x = radius * 1.75
-    step_y = radius * math.sqrt(3)
-    cols = int(width / step_x) + 3
-    rows = int(height / step_y) + 3
-    for row in range(rows):
-        for col in range(cols):
-            cx = col * step_x + (row % 2) * (step_x / 2) - radius
-            cy = row * step_y - radius
-            _draw_hexagon(draw, cx, cy, radius, color, width=1)
-
-
 def _draw_corner_web(
     draw: ImageDraw.ImageDraw,
     origin: tuple[float, float],
@@ -107,6 +122,7 @@ def _draw_corner_web(
     color: tuple[int, int, int],
     accent: tuple[int, int, int],
     size: float = 220,
+    line_width: int = 1,
 ) -> None:
     """Spider-web motif anchored in a corner."""
     ox, oy = origin
@@ -116,7 +132,7 @@ def _draw_corner_web(
         angle = math.radians(angle_deg + i * (360 / spokes))
         ex = ox + max_radius * math.cos(angle)
         ey = oy + max_radius * math.sin(angle)
-        draw.line((ox, oy, ex, ey), fill=color, width=1)
+        draw.line((ox, oy, ex, ey), fill=color, width=line_width)
 
     rings = 5
     for ring in range(1, rings + 1):
@@ -128,7 +144,11 @@ def _draw_corner_web(
         for i in range(spokes):
             p1 = points[i]
             p2 = points[(i + 1) % spokes]
-            draw.line((p1[0], p1[1], p2[0], p2[1]), fill=accent if ring % 2 else color, width=1)
+            draw.line(
+                (p1[0], p1[1], p2[0], p2[1]),
+                fill=accent if ring % 2 else color,
+                width=line_width,
+            )
 
 
 def _draw_spider_emblem(
@@ -190,18 +210,45 @@ def _draw_action_swoosh(
         draw.line(points, fill=color, width=width, joint="curve")
 
 
+def _draw_hex_grid(
+    draw: ImageDraw.ImageDraw,
+    width: int,
+    height: int,
+    color: tuple[int, int, int],
+    radius: float = 34,
+    line_width: int = 1,
+) -> None:
+    """Future Foundation-style hex grid."""
+    step_x = radius * 1.75
+    step_y = radius * math.sqrt(3)
+    cols = int(width / step_x) + 3
+    rows = int(height / step_y) + 3
+    for row in range(rows):
+        for col in range(cols):
+            cx = col * step_x + (row % 2) * (step_x / 2) - radius
+            cy = row * step_y - radius
+            _draw_hexagon(draw, cx, cy, radius, color, width=line_width)
+
+
 def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> None:
-    """Layer subtle superhero motifs that match the center character theme."""
+    """Layer superhero motifs that match the center character theme."""
     width, height = slide.size
     draw = ImageDraw.Draw(slide)
-    light, medium, strong = _motif_palette(bg_rgb)
+    palette = _motif_palette(bg_rgb)
     cx, cy = width / 2, height / 2
 
-    _draw_hex_grid(draw, width, height, light, radius=32)
+    _draw_hex_grid(
+        draw,
+        width,
+        height,
+        palette.hex_grid,
+        radius=32,
+        line_width=palette.hex_width,
+    )
 
     burst_layer = Image.new("RGBA", slide.size, (0, 0, 0, 0))
     burst_draw = ImageDraw.Draw(burst_layer)
-    burst_color = (*light, 90)
+    burst_color = (*palette.burst, palette.burst_alpha)
     for i in range(28):
         a1 = math.radians(i * 360 / 28)
         a2 = math.radians((i + 0.55) * 360 / 28)
@@ -223,18 +270,26 @@ def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> N
         (width, height, -135),
     ]
     for x, y, angle in corners:
-        _draw_corner_web(draw, (x, y), angle, medium, strong, size=240)
+        _draw_corner_web(
+            draw,
+            (x, y),
+            angle,
+            palette.web_primary,
+            palette.web_accent,
+            size=260,
+            line_width=palette.web_width,
+        )
 
     emblem_spots = [
-        (160, 190, 1.4),
-        (width - 160, 190, 1.4),
-        (160, height - 190, 1.4),
-        (width - 160, height - 190, 1.4),
-        (320, height / 2, 1.0),
-        (width - 320, height / 2, 1.0),
+        (160, 190, 1.5),
+        (width - 160, 190, 1.5),
+        (160, height - 190, 1.5),
+        (width - 160, height - 190, 1.5),
+        (320, height / 2, 1.1),
+        (width - 320, height / 2, 1.1),
     ]
     for ex, ey, scale in emblem_spots:
-        _draw_spider_emblem(draw, ex, ey, scale, light)
+        _draw_spider_emblem(draw, ex, ey, scale, palette.emblem)
 
     swooshes = [
         [(80, 420), (260, 380), (420, 430), (560, 520)],
@@ -243,14 +298,14 @@ def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> N
         [(width - 120, height - 260), (width - 300, height - 220), (width - 480, height - 280)],
     ]
     for pts in swooshes:
-        _draw_action_swoosh(draw, pts, medium, width=2)
+        _draw_action_swoosh(draw, pts, palette.swoosh, width=3)
 
     border_inset = 28
     draw.rounded_rectangle(
         (border_inset, border_inset, width - border_inset, height - border_inset),
         radius=18,
-        outline=medium,
-        width=2,
+        outline=palette.border,
+        width=palette.border_width,
     )
 
 
