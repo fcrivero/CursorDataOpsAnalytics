@@ -17,7 +17,7 @@ COLOR_MAP = {
     "white": "#FFFFFF",
     "black": "#000000",
     "red": "#E53935",
-    "orange": "#FB8C00",
+    "orange": "#F57C00",
     "yellow": "#FDD835",
     "green": "#43A047",
     "blue": "#1E88E5",
@@ -91,6 +91,21 @@ def _motif_palette(bg_rgb: tuple[int, int, int]) -> MotifPalette:
         burst_alpha=130,
         emblem=(max(0, r - 55), max(0, g - 50), max(0, b - 45)),
         swoosh=(max(0, r - 65), max(0, g - 65), max(0, b - 60)),
+    )
+
+
+def _orange_motif_palette() -> MotifPalette:
+    """Fantastic Four / Thing palette on orange backgrounds."""
+    return MotifPalette(
+        hex_grid=(180, 80, 20),
+        web_primary=(120, 45, 18),
+        web_accent=(45, 22, 12),
+        burst=(255, 190, 90),
+        burst_alpha=140,
+        emblem=(21, 101, 192),
+        swoosh=(62, 30, 12),
+        hex_width=2,
+        web_width=2,
     )
 
 
@@ -201,7 +216,112 @@ def _draw_hex_grid(
             _draw_hexagon(draw, cx, cy, radius, color, width=line_width)
 
 
-def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> None:
+def _draw_ff_four_emblem(
+    draw: ImageDraw.ImageDraw,
+    cx: float,
+    cy: float,
+    scale: float,
+    primary: tuple[int, int, int],
+    accent: tuple[int, int, int],
+) -> None:
+    """Fantastic Four '4' emblem watermark."""
+    radius = 22 * scale
+    draw.ellipse(
+        (cx - radius, cy - radius, cx + radius, cy + radius),
+        outline=accent,
+        width=max(2, int(2 * scale)),
+    )
+    draw.ellipse(
+        (cx - radius + 4 * scale, cy - radius + 4 * scale, cx + radius - 4 * scale, cy + radius - 4 * scale),
+        fill=primary,
+    )
+    stroke = max(2, int(2 * scale))
+    draw.line((cx - 8 * scale, cy - 10 * scale, cx - 8 * scale, cy + 12 * scale), fill=accent, width=stroke)
+    draw.line((cx - 8 * scale, cy - 10 * scale, cx + 10 * scale, cy - 10 * scale), fill=accent, width=stroke)
+    draw.line((cx - 8 * scale, cy - 1 * scale, cx + 4 * scale, cy - 1 * scale), fill=accent, width=stroke)
+    draw.line((cx + 4 * scale, cy - 10 * scale, cx + 4 * scale, cy + 12 * scale), fill=accent, width=stroke)
+
+
+def _draw_rock_crack_grid(
+    draw: ImageDraw.ImageDraw,
+    width: int,
+    height: int,
+    color: tuple[int, int, int],
+    accent: tuple[int, int, int],
+) -> None:
+    """Angular rock-plate pattern inspired by The Thing's skin."""
+    step = 88
+    for row in range(-1, height // step + 2):
+        for col in range(-1, width // step + 2):
+            x = col * step + (row % 2) * (step // 2)
+            y = row * step
+            points = [
+                (x, y + 12),
+                (x + step * 0.55, y),
+                (x + step, y + 18),
+                (x + step * 0.72, y + step * 0.55),
+                (x + step * 0.35, y + step * 0.62),
+                (x + 8, y + step * 0.42),
+            ]
+            draw.polygon(points, outline=color, width=2)
+            crack_x = x + step * 0.5
+            crack_y = y + step * 0.3
+            draw.line(
+                (crack_x, crack_y, crack_x + step * 0.2, crack_y + step * 0.15, crack_x + step * 0.1, crack_y + step * 0.35),
+                fill=accent,
+                width=2,
+            )
+
+
+def _draw_impact_burst(
+    draw: ImageDraw.ImageDraw,
+    cx: float,
+    cy: float,
+    color: tuple[int, int, int],
+    accent: tuple[int, int, int],
+    size: float = 180,
+) -> None:
+    """Punch-impact starburst for corners."""
+    spikes = 8
+    for i in range(spikes):
+        angle = math.radians(i * 360 / spikes)
+        ex = cx + size * math.cos(angle)
+        ey = cy + size * math.sin(angle)
+        draw.line((cx, cy, ex, ey), fill=color, width=3)
+    inner = size * 0.45
+    for i in range(spikes):
+        angle = math.radians(i * 360 / spikes + 22.5)
+        ex = cx + inner * math.cos(angle)
+        ey = cy + inner * math.sin(angle)
+        draw.line((cx, cy, ex, ey), fill=accent, width=2)
+    draw.ellipse((cx - 10, cy - 10, cx + 10, cy + 10), fill=accent)
+
+
+def _draw_comic_burst_layer(
+    slide: Image.Image,
+    palette: MotifPalette,
+) -> None:
+    width, height = slide.size
+    cx, cy = width / 2, height / 2
+    burst_layer = Image.new("RGBA", slide.size, (0, 0, 0, 0))
+    burst_draw = ImageDraw.Draw(burst_layer)
+    burst_color = (*palette.burst, palette.burst_alpha)
+    for i in range(28):
+        a1 = math.radians(i * 360 / 28)
+        a2 = math.radians((i + 0.55) * 360 / 28)
+        inner, outer = 140, 560
+        points = [
+            (cx + inner * math.cos(a1), cy + inner * math.sin(a1)),
+            (cx + outer * math.cos(a1), cy + outer * math.sin(a1)),
+            (cx + outer * math.cos(a2), cy + outer * math.sin(a2)),
+            (cx + inner * math.cos(a2), cy + inner * math.sin(a2)),
+        ]
+        if i % 2 == 0:
+            burst_draw.polygon(points, fill=burst_color)
+    slide.paste(burst_layer, (0, 0), burst_layer)
+
+
+def draw_spider_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> None:
     """Layer superhero motifs that match the center character theme."""
     width, height = slide.size
     draw = ImageDraw.Draw(slide)
@@ -272,6 +392,53 @@ def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> N
         _draw_action_swoosh(draw, pts, palette.swoosh, width=3)
 
 
+def draw_thing_motifs(slide: Image.Image) -> None:
+    """Fantastic Four / The Thing motifs for orange slides."""
+    width, height = slide.size
+    draw = ImageDraw.Draw(slide)
+    palette = _orange_motif_palette()
+
+    _draw_rock_crack_grid(draw, width, height, palette.hex_grid, palette.web_accent)
+    _draw_comic_burst_layer(slide, palette)
+    draw = ImageDraw.Draw(slide)
+
+    corners = [
+        (90, 90),
+        (width - 90, 90),
+        (90, height - 90),
+        (width - 90, height - 90),
+    ]
+    for x, y in corners:
+        _draw_impact_burst(draw, x, y, palette.web_primary, palette.web_accent, size=170)
+
+    emblem_spots = [
+        (170, 200, 1.3),
+        (width - 170, 200, 1.3),
+        (170, height - 200, 1.3),
+        (width - 170, height - 200, 1.3),
+        (310, height / 2, 1.0),
+        (width - 310, height / 2, 1.0),
+    ]
+    for ex, ey, scale in emblem_spots:
+        _draw_ff_four_emblem(draw, ex, ey, scale, palette.emblem, palette.web_accent)
+
+    swooshes = [
+        [(70, 430), (240, 390), (410, 450), (580, 540)],
+        [(width - 70, 430), (width - 240, 390), (width - 410, 450), (width - 580, 540)],
+        [(100, height - 250), (290, height - 210), (470, height - 270)],
+        [(width - 100, height - 250), (width - 290, height - 210), (width - 470, height - 270)],
+    ]
+    for pts in swooshes:
+        _draw_action_swoosh(draw, pts, palette.swoosh, width=4)
+
+
+def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int], color: str) -> None:
+    if color.lower() == "orange":
+        draw_thing_motifs(slide)
+    else:
+        draw_spider_motifs(slide, bg_rgb)
+
+
 def create_slide(
     image_path: Path,
     color: str,
@@ -282,7 +449,7 @@ def create_slide(
     slide = Image.new("RGB", SLIDE_SIZE, bg_rgb)
 
     if motifs:
-        draw_superhero_motifs(slide, bg_rgb)
+        draw_superhero_motifs(slide, bg_rgb, color)
 
     with Image.open(image_path) as source:
         img = source.convert("RGBA")
