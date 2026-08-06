@@ -52,10 +52,8 @@ class MotifPalette:
     burst_alpha: int
     emblem: tuple[int, int, int]
     swoosh: tuple[int, int, int]
-    border: tuple[int, int, int]
     hex_width: int = 2
     web_width: int = 2
-    border_width: int = 3
 
 
 def _motif_palette(bg_rgb: tuple[int, int, int]) -> MotifPalette:
@@ -72,10 +70,8 @@ def _motif_palette(bg_rgb: tuple[int, int, int]) -> MotifPalette:
             burst_alpha=150,
             emblem=(88, 98, 112),
             swoosh=(70, 70, 78),
-            border=(58, 58, 66),
             hex_width=2,
             web_width=2,
-            border_width=3,
         )
     if luminance < 55:
         return MotifPalette(
@@ -86,7 +82,6 @@ def _motif_palette(bg_rgb: tuple[int, int, int]) -> MotifPalette:
             burst_alpha=120,
             emblem=(150, 158, 170),
             swoosh=(190, 190, 198),
-            border=(210, 210, 218),
         )
     return MotifPalette(
         hex_grid=(min(255, r + 40), min(255, g + 40), min(255, b + 55)),
@@ -96,7 +91,6 @@ def _motif_palette(bg_rgb: tuple[int, int, int]) -> MotifPalette:
         burst_alpha=130,
         emblem=(max(0, r - 55), max(0, g - 50), max(0, b - 45)),
         swoosh=(max(0, r - 65), max(0, g - 65), max(0, b - 60)),
-        border=(max(0, r - 75), max(0, g - 75), max(0, b - 70)),
     )
 
 
@@ -175,29 +169,6 @@ def _draw_spider_emblem(
         mx = cx + (leg_len * 0.45) * math.cos(rad) + (6 * scale) * math.cos(rad + math.pi / 2)
         my = cy + (leg_len * 0.45) * math.sin(rad) + (6 * scale) * math.sin(rad + math.pi / 2)
         draw.line((cx, cy, mx, my, ex, ey), fill=color, width=max(1, int(scale * 0.8)))
-
-
-def _draw_comic_burst(
-    draw: ImageDraw.ImageDraw,
-    cx: float,
-    cy: float,
-    color: tuple[int, int, int],
-    inner_radius: float = 120,
-    outer_radius: float = 520,
-    rays: int = 36,
-) -> None:
-    """Soft comic-book radial burst behind the hero."""
-    for i in range(rays):
-        a1 = math.radians(i * 360 / rays)
-        a2 = math.radians((i + 0.45) * 360 / rays)
-        points = [
-            (cx + inner_radius * math.cos(a1), cy + inner_radius * math.sin(a1)),
-            (cx + outer_radius * math.cos(a1), cy + outer_radius * math.sin(a1)),
-            (cx + outer_radius * math.cos(a2), cy + outer_radius * math.sin(a2)),
-            (cx + inner_radius * math.cos(a2), cy + inner_radius * math.sin(a2)),
-        ]
-        if i % 2 == 0:
-            draw.polygon(points, fill=color)
 
 
 def _draw_action_swoosh(
@@ -299,14 +270,6 @@ def draw_superhero_motifs(slide: Image.Image, bg_rgb: tuple[int, int, int]) -> N
     ]
     for pts in swooshes:
         _draw_action_swoosh(draw, pts, palette.swoosh, width=3)
-
-    border_inset = 28
-    draw.rounded_rectangle(
-        (border_inset, border_inset, width - border_inset, height - border_inset),
-        radius=18,
-        outline=palette.border,
-        width=palette.border_width,
-    )
 
 
 def create_slide(
