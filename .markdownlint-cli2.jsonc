@@ -1,0 +1,18 @@
+{
+  // Markdown lint rules for the todo-log workspace.
+  // Relaxed where the repo's existing todo-log style intentionally differs
+  // from defaults (long reference links, trailing-space line breaks, etc.).
+  "config": {
+    "default": true,
+    // Todo items embed long Confluence/Jira/Teams URLs that must stay on one line.
+    "MD013": false,
+    // The logs use two trailing spaces for hard line breaks in headers.
+    "MD009": false,
+    // Duplicate headings ("Behavior", "Response format") appear per agent section.
+    "MD024": { "siblings_only": true },
+    // Bare emphasis is used stylistically in a few places.
+    "MD036": false
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**"]
+}

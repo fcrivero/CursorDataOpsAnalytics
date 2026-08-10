@@ -1,0 +1,15 @@
+{
+  "$comment": "Link-check config. Private/enterprise hosts require SSO and are skipped so the check validates public + relative links without false failures.",
+  "ignorePatterns": [
+    { "pattern": "^https?://[^/]*atlassian\\.net" },
+    { "pattern": "^https?://[^/]*teams\\.microsoft\\.com" },
+    { "pattern": "^https?://[^/]*github\\.twdcgrid\\.net" },
+    { "pattern": "^https?://docs\\.google\\.com" },
+    { "pattern": "^mailto:" }
+  ],
+  "timeout": "15s",
+  "retryOn429": true,
+  "retryCount": 2,
+  "fallbackRetryDelay": "10s",
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308]
+}

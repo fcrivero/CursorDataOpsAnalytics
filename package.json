@@ -1,0 +1,16 @@
+{
+  "name": "cursordataopsanalytics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal workspace for todo tracking via Cursor Cloud Agent.",
+  "scripts": {
+    "lint": "markdownlint-cli2 \"**/*.md\"",
+    "lint:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+    "check-links": "markdown-link-check --config .markdown-link-check.json --quiet README.md AGENTS.md personal-todo.md daily-log.md",
+    "check": "npm run lint && npm run check-links"
+  },
+  "devDependencies": {
+    "markdown-link-check": "3.15.0",
+    "markdownlint-cli2": "0.23.2"
+  }
+}
