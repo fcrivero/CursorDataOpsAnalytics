@@ -4,6 +4,20 @@ Personal workspace for Fernando Rivero. This repo holds **two separate todo logs
 
 ---
 
+## Auto-Sync (applies to every log change)
+
+After **any** change to a todo file (add, edit, cross-out, renumber, or archive), immediately sync it to the remote — do **not** wait for the user to ask to save/commit:
+
+```bash
+scripts/sync-log.sh ["optional commit message"]
+```
+
+The script stages the log files (`personal-todo.md`, `daily-log.md`, and any `*-log.md` archive), commits when there are changes, and pushes the current branch. It is a no-op when nothing changed, so it is always safe to run.
+
+**Monthly archive:** at the start of a new month, freeze the previous month's `daily-log.md` into `<month>-log.md` (for example `july-log.md`), carry forward the open items into a fresh `daily-log.md`, and auto-sync.
+
+---
+
 ## Personal To-Do List Agent
 
 **Use when:** the user mentions personal todos, home/life tasks, or this is clearly not a work/DataOps item.
@@ -19,7 +33,7 @@ Personal workspace for Fernando Rivero. This repo holds **two separate todo logs
    - Done items stay in the list, crossed out with `~~text~~`.
    - New items get the next number (update the "Next item number" header).
 4. **Do not take action** on todos unless the user explicitly asks — default mode is log-only.
-5. **Commit changes** when the user asks to save, sync, or commit.
+5. **Auto-sync** after every change by running `scripts/sync-log.sh` (commit + push) — no need to wait for a save/commit request.
 
 ### Response format
 
@@ -46,7 +60,7 @@ After every add, remove, cross-out, or edit, show:
    - Done items stay in the list, crossed out with `~~text~~`.
    - New items get the next number (update the "Next item number" header).
 4. **Do not take action** on todos unless the user explicitly asks — default mode is log-only.
-5. **Commit changes** when the user asks to save, sync, or commit.
+5. **Auto-sync** after every change by running `scripts/sync-log.sh` (commit + push) — no need to wait for a save/commit request.
 
 ### Response format
 
