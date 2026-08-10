@@ -7,7 +7,9 @@ Personal workspace for todo tracking via Cursor Cloud Agent.
 | File | Purpose |
 | ---- | ------- |
 | [`personal-todo.md`](personal-todo.md) | Personal / life todo list (source of truth) |
-| [`daily-log.md`](daily-log.md) | Work DataOps / Analytics daily activity and todo list |
+| [`daily-log.md`](daily-log.md) | Work DataOps / Analytics daily activity and todo list (current month) |
+| [`july-log.md`](july-log.md) | Frozen monthly archive (July 2026) |
+| [`scripts/sync-log.sh`](scripts/sync-log.sh) | Auto-sync helper: stage logs, commit, and push |
 | [`AGENTS.md`](AGENTS.md) | Instructions for Cursor / Cloud Agent sessions |
 
 ## Usage
@@ -15,7 +17,17 @@ Personal workspace for todo tracking via Cursor Cloud Agent.
 1. Open this repo in Cursor (local or Cloud Agent).
 2. Start an agent session — it reads `AGENTS.md` and the relevant log file.
 3. Add, update, or cross out todos in chat; the agent updates the log file.
-4. Commit and push to sync across devices.
+4. The agent **auto-syncs** after every change via `scripts/sync-log.sh` (commit + push), so logs stay current across devices without a manual save.
+
+Each month is archived: the previous `daily-log.md` is frozen into `<month>-log.md` (e.g. `july-log.md`) and open items are carried forward into a fresh `daily-log.md`.
+
+### Auto-sync
+
+```bash
+scripts/sync-log.sh ["optional commit message"]
+```
+
+Stages the log files (`personal-todo.md`, `daily-log.md`, and any `*-log.md` archive), commits when there are changes, and pushes the current branch. It is a no-op when nothing changed.
 
 ## Cloud Agent
 

@@ -1,4 +1,4 @@
 {
   "name": "CursorDataOpsAnalytics",
-  "install": "npm ci"
+  "install": "npm ci\nchmod +x scripts/sync-log.sh"
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "markdownlint-cli2 \"**/*.md\"",
     "lint:fix": "markdownlint-cli2 --fix \"**/*.md\"",
-    "check-links": "markdown-link-check --config .markdown-link-check.json --quiet README.md AGENTS.md personal-todo.md daily-log.md",
+    "check-links": "markdown-link-check --config .markdown-link-check.json --quiet README.md AGENTS.md personal-todo.md daily-log.md july-log.md",
     "check": "npm run lint && npm run check-links"
   },
   "devDependencies": {
