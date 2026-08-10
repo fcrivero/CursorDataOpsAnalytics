@@ -1,0 +1,4 @@
+{
+  "name": "CursorDataOpsAnalytics",
+  "install": "npm ci"
+}
