@@ -21,7 +21,7 @@
 2. Check virtual tags for FinOps ADM dashboard — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_NjE5MTFhOTUtZTZlMS00NmZjLWE4MGUtZDU1YzMxMDIzYmVj@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 3. Set up Cursor on MacBook
 4. Follow up with open Oncall items
-5. Review runbook and pipeline with team — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_Mjg0ZmViMTQtMGUyMS00YjgzLWFhZTktODI4ZjM3OWE1MGNl@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+5. ~~Review runbook and pipeline with team~~ — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_Mjg0ZmViMTQtMGUyMS00YjgzLWFhZTktODI4ZjM3OWE1MGNl@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 6. Review standard for incidents history pages in Confluence — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_Mjg0ZmViMTQtMGUyMS00YjgzLWFhZTktODI4ZjM3OWE1MGNl@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 7. Review Cyber Remediation BOE tickets with Padmanabhan, Aravind X. — follow up with email Re: Security Findings - DEE Technology BI: BusinessObjects (BAPP0159691) — [Aravind.X.Padmanabhan.-ND@disney.com](mailto:Aravind.X.Padmanabhan.-ND@disney.com) — [Teams thread](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1786387463196?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1786387463196&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1786387463196)
 8. Need to get Active users from the following services — [SKRULL-8785](https://deept.atlassian.net/browse/SKRULL-8785) — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1785852906120?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1785852906120&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1785852906120)
@@ -40,5 +40,5 @@
 
 ## Summary
 
-**Open:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
-**Done:** —
+**Open:** 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
+**Done:** 5
