@@ -19,7 +19,7 @@
 
 1. Follow up with MSTR on 2-year contract renewal — [Teams chat](https://teams.microsoft.com/l/chat/19:0b7cd08d164840d1945d1585f31c5b80@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 2. Check virtual tags for FinOps ADM dashboard — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_NjE5MTFhOTUtZTZlMS00NmZjLWE4MGUtZDU1YzMxMDIzYmVj@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-3. Set up Cursor on MacBook
+3. ~~Set up Cursor on MacBook~~
 4. Follow up with open Oncall items
 5. ~~Review runbook and pipeline with team~~ — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_Mjg0ZmViMTQtMGUyMS00YjgzLWFhZTktODI4ZjM3OWE1MGNl@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 6. Review standard for incidents history pages in Confluence — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_Mjg0ZmViMTQtMGUyMS00YjgzLWFhZTktODI4ZjM3OWE1MGNl@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
@@ -40,5 +40,5 @@
 
 ## Summary
 
-**Open:** 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
-**Done:** 5
+**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
+**Done:** 3, 5
