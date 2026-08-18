@@ -35,12 +35,12 @@
 16. DataOps presentation due Aug 24 — [Google Slides](https://docs.google.com/presentation/d/12ALF2KL5NMvjKL3Os5xI6UmaiJusAFaZ/edit?slide=id.p1#slide=id.p1)
 17. Analytics presentation due Aug 24 — [Google Slides](https://docs.google.com/presentation/d/1h9ZbwS-C4COKYqF1gDreqLJdoX9JIb11/edit?slide=id.p1#slide=id.p1)
 18. Work on MSTR SOX UAR for Q4 — [ADIA-1800](https://deept.atlassian.net/browse/ADIA-1800)
-19. Weekly focus plan
+19. ~~Weekly focus plan~~
 20. Create SKRULL ticket to follow up on pipelines Confluence pages — [Data Pipelines](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192841195/Data+Pipelines?atl_f=PAGETREE)
 
 ---
 
 ## Summary
 
-**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20  
-**Done:** 3, 5, 14
+**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 20  
+**Done:** 3, 5, 14, 19
