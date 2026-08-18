@@ -30,7 +30,7 @@
 11. Follow up on ADINC MS Teams subscription — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1785787349195?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1785523471370&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1785787349195)
 12. Check if we can add target date on SKRULL support bot — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_OGFiMjg0OTMtNWU5NC00NmUyLWJmYTctYzk1ZGMzYzViMWZm@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 13. Check if we can get comments from Jira posted on MS Teams — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_OGFiMjg0OTMtNWU5NC00NmUyLWJmYTctYzk1ZGMzYzViMWZm@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-14. Create Focus plan
+14. ~~Create Focus plan~~
 15. Follow up on SLA/BI Performance Dashboard and Subscription — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1786391443430?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1786391443430&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1786391443430)
 16. DataOps presentation due Aug 24 — [Google Slides](https://docs.google.com/presentation/d/12ALF2KL5NMvjKL3Os5xI6UmaiJusAFaZ/edit?slide=id.p1#slide=id.p1)
 17. Analytics presentation due Aug 24 — [Google Slides](https://docs.google.com/presentation/d/1h9ZbwS-C4COKYqF1gDreqLJdoX9JIb11/edit?slide=id.p1#slide=id.p1)
@@ -42,5 +42,5 @@
 
 ## Summary
 
-**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20  
-**Done:** 3, 5
+**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20  
+**Done:** 3, 5, 14
