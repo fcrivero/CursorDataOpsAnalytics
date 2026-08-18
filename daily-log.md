@@ -1,8 +1,8 @@
 # August List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-08-11  
-**Next item number:** 19
+**Last updated:** 2026-08-18  
+**Next item number:** 21
 
 ## Rules
 
@@ -35,10 +35,12 @@
 16. DataOps presentation due Aug 24 — [Google Slides](https://docs.google.com/presentation/d/12ALF2KL5NMvjKL3Os5xI6UmaiJusAFaZ/edit?slide=id.p1#slide=id.p1)
 17. Analytics presentation due Aug 24 — [Google Slides](https://docs.google.com/presentation/d/1h9ZbwS-C4COKYqF1gDreqLJdoX9JIb11/edit?slide=id.p1#slide=id.p1)
 18. Work on MSTR SOX UAR for Q4 — [ADIA-1800](https://deept.atlassian.net/browse/ADIA-1800)
+19. Work on Tech Ops presentations
+20. Weekly focus plan
 
 ---
 
 ## Summary
 
-**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
+**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20  
 **Done:** 3, 5
