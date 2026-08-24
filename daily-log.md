@@ -1,8 +1,8 @@
 # August List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-08-18  
-**Next item number:** 21
+**Last updated:** 2026-08-24  
+**Next item number:** 22
 
 ## Rules
 
@@ -37,10 +37,11 @@
 18. Work on MSTR SOX UAR for Q4 — [ADIA-1800](https://deept.atlassian.net/browse/ADIA-1800)
 19. ~~Weekly focus plan~~
 20. Create SKRULL ticket to follow up on pipelines Confluence pages — [Data Pipelines](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192841195/Data+Pipelines?atl_f=PAGETREE)
+21. Review CPM project documentation — [Teams message](https://teams.microsoft.com/l/message/19:a8116d25b81b45b3817f40cffb24a129@thread.v2/1787577666512?context=%7B%22contextType%22%3A%22chat%22%7D)
 
 ---
 
 ## Summary
 
-**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 20  
+**Open:** 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21  
 **Done:** 3, 5, 14, 19
