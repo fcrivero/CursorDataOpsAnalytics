@@ -1,8 +1,8 @@
 # August List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-08-26  
-**Next item number:** 22
+**Last updated:** 2026-08-31  
+**Next item number:** 23
 
 ## Rules
 
@@ -38,10 +38,11 @@
 19. Follow up with Arif on Runbook standardization and Confluence structure for BI Addressable team — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_OWNlMWZlZTctZjY1Ny00ODJjLTk5NjAtMThjOTY2NzUyYWUx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 20. Follow up on ADINC MS Teams subscription — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1785787349195?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1785523471370&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1785787349195)
 21. Work on MSTR SOX UAR for Q4 — [ADIA-1800](https://deept.atlassian.net/browse/ADIA-1800)
+22. Update ADINC auditing rules — Form Name: ADINC Intake form; Field Name: SOURCE_SYSTEM; Value to Add: 3P Vendor - Hightouch
 
 ---
 
 ## Summary
 
-**Open:** 16, 17, 18, 19, 20, 21  
+**Open:** 16, 17, 18, 19, 20, 21, 22  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
