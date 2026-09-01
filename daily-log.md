@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-08-31  
-**Next item number:** 29
+**Next item number:** 30
 
 ## Rules
 
@@ -36,7 +36,7 @@
 17. Need to get Active users from the following services — [SKRULL-8785](https://deept.atlassian.net/browse/SKRULL-8785) — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1785852906120?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1785852906120&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1785852906120)
 18. Review and plan Analytics EPICs
 19. Follow up with Arif on Runbook standardization and Confluence structure for BI Addressable team — [Teams chat](https://teams.microsoft.com/l/chat/19:meeting_OWNlMWZlZTctZjY1Ny00ODJjLTk5NjAtMThjOTY2NzUyYWUx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-20. Follow up on ADINC MS Teams subscription — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1785787349195?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1785523471370&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1785787349195)
+20. ~~Follow up on ADINC MS Teams subscription~~ — [Teams message](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1785787349195?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1785523471370&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support&createdTime=1785787349195)
 21. Work on MSTR SOX UAR for Q4 — [ADIA-1800](https://deept.atlassian.net/browse/ADIA-1800)
 22. ~~Update ADINC auditing rules — Form Name: ADINC Intake form; Field Name: SOURCE_SYSTEM; Value to Add: 3P Vendor - Hightouch~~
 23. Review Confluence — [Ads Data INC Process](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192842190/Ads+Data+INC+Process)
@@ -45,10 +45,11 @@
 26. Remove PNG from ADINC SharePoint subscription
 27. Check shared mailbox on ADINC subscription
 28. ~~Share MCP Cursor config with Pawan~~
+29. Follow up on Tidal's SOX Security Findings - Cisco Tidal Enterprise Job Scheduler (BAPP0216672)
 
 ---
 
 ## Summary
 
-**Open:** 16, 17, 18, 19, 20, 21, 23, 25, 26, 27  
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 22, 24, 28
+**Open:** 16, 17, 18, 19, 21, 23, 25, 26, 27, 29  
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 20, 22, 24, 28
