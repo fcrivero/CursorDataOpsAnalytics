@@ -18,6 +18,17 @@ The script stages the log files (`personal-todo.md`, `daily-log.md`, and any `*-
 
 ---
 
+## List-Maintenance Rules (apply to both logs)
+
+These rules keep the list ordered and gap-free after every edit:
+
+- **Cross-out → resort + renumber:** every time an item is crossed out, move it into the done section and immediately **resort and renumber** the full list.
+- **Resort order:** done items first (numbered `1…N`), then open items (`N+1…`). Renumber every item so numbers run `1` through the last open item with **no gaps**.
+- **Consolidate → merge + delete duplicate:** when two items are duplicates, merge them into one line (keep all links) and delete the duplicate. **Never** leave placeholder lines like "Consolidated into #X".
+- Always update the **"Next item number"** header and the **Summary** (Open / Done) after resorting.
+
+---
+
 ## Personal To-Do List Agent
 
 **Use when:** the user mentions personal todos, home/life tasks, or this is clearly not a work/DataOps item.
@@ -32,6 +43,8 @@ The script stages the log files (`personal-todo.md`, `daily-log.md`, and any `*-
    - Use sequential numbers; never reuse or skip.
    - Done items stay in the list, crossed out with `~~text~~`.
    - New items get the next number (update the "Next item number" header).
+   - On cross-out, **resort + renumber** (done first, then open) with no gaps.
+   - On duplicate items, **merge + delete the duplicate** — no placeholder lines.
 4. **Do not take action** on todos unless the user explicitly asks — default mode is log-only.
 5. **Auto-sync** after every change by running `scripts/sync-log.sh` (commit + push) — no need to wait for a save/commit request.
 
@@ -59,6 +72,8 @@ After every add, remove, cross-out, or edit, show:
    - Use sequential numbers; never reuse or skip.
    - Done items stay in the list, crossed out with `~~text~~`.
    - New items get the next number (update the "Next item number" header).
+   - On cross-out, **resort + renumber** (done first, then open) with no gaps.
+   - On duplicate items, **merge + delete the duplicate** — no placeholder lines.
 4. **Do not take action** on todos unless the user explicitly asks — default mode is log-only.
 5. **Auto-sync** after every change by running `scripts/sync-log.sh` (commit + push) — no need to wait for a save/commit request.
 
