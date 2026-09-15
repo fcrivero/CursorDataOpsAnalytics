@@ -1,8 +1,8 @@
 # August List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-09-14  
-**Next item number:** 36
+**Last updated:** 2026-09-15  
+**Next item number:** 39
 
 ## Rules
 
@@ -55,10 +55,13 @@
 33. Check shared mailbox on ADINC subscription — review shared mailbox documentation — [Teams message](https://teams.microsoft.com/l/message/19:6685b178-7f01-40c8-93e2-5de8ee968711_90c2c1dd-d813-4643-a8e5-f3aa635fc4ef@unq.gbl.spaces/1788974708763?context=%7B%22contextType%22%3A%22chat%22%7D)
 34. Follow up on Tidal's SOX Security Findings - Cisco Tidal Enterprise Job Scheduler (BAPP0216672)
 35. Review documentation on how to add templates in Confluence — [Create a template](https://support.atlassian.com/confluence-cloud/docs/create-a-template/)
+36. Follow up on ADINC jobs/workbooks CICD
+37. Create SKRULL tickets to document ADINC jobs in [Databricks DBX](https://disney-enterprise.atlassian.net/wiki/spaces/DDPAE/pages/2938542228/Databricks+DBX)
+38. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
 
 ---
 
 ## Summary
 
-**Open:** 29, 30, 31, 32, 33, 34, 35  
+**Open:** 29, 30, 31, 32, 33, 34, 35, 36, 37, 38  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28
