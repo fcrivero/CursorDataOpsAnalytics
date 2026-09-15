@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-09-15  
-**Next item number:** 39
+**Next item number:** 40
 
 ## Rules
 
@@ -58,10 +58,11 @@
 36. Follow up on ADINC jobs/workbooks CICD
 37. Create SKRULL tickets to document ADINC jobs in [Databricks DBX](https://disney-enterprise.atlassian.net/wiki/spaces/DDPAE/pages/2938542228/Databricks+DBX)
 38. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
+39. Document DBX Workbooks and jobs for ADINC
 
 ---
 
 ## Summary
 
-**Open:** 29, 30, 31, 32, 33, 34, 35, 36, 37, 38  
+**Open:** 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28
