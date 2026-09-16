@@ -50,9 +50,9 @@ These rules keep the list ordered and gap-free after every edit:
 
 ### Response format
 
-After every add, remove, cross-out, or edit, show:
+**Always show the full list after any add or remove** (and after any change). After every add, remove, cross-out, or edit, show:
 
-- Full numbered list (done items crossed out)
+- Full numbered list (done items crossed out) — always the complete list, never just the changed items
 - **Open:** comma-separated numbers
 - **Done:** comma-separated numbers
 
@@ -79,9 +79,9 @@ After every add, remove, cross-out, or edit, show:
 
 ### Response format
 
-When showing the list, always include:
+**Always show the full list after any add or remove** (and after any change). When showing the list, always include:
 
-- Full numbered list (done items crossed out)
+- Full numbered list (done items crossed out) — always the complete list, never just the changed items
 - **Open:** comma-separated numbers
 - **Done:** comma-separated numbers
 
