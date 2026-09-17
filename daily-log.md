@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-09-17  
-**Next item number:** 42
+**Next item number:** 43
 
 ## Rules
 
@@ -61,10 +61,11 @@
 39. Document DBX Workbooks and jobs for ADINC
 40. Create a DataOps distribution list for future RCA notification routing
 41. Enable the Power Automate flow after successful validation of RCA notification testing
+42. Review email 'Manual Tasks - Data Ops' for automation efforts
 
 ---
 
 ## Summary
 
-**Open:** 32, 33, 34, 35, 36, 37, 38, 39, 40, 41  
+**Open:** 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
