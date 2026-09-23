@@ -1,8 +1,8 @@
 # August List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-09-22  
-**Next item number:** 44
+**Last updated:** 2026-09-23  
+**Next item number:** 45
 
 ## Rules
 
@@ -63,10 +63,11 @@
 41. Enable the Power Automate flow after successful validation of RCA notification testing
 42. Review email 'Manual Tasks - Data Ops' for automation efforts
 43. Check DBX ADINC Dashboard subscription for shared mailbox
+44. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
 
 ---
 
 ## Summary
 
-**Open:** 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43  
+**Open:** 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
