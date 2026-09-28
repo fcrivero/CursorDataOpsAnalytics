@@ -1,7 +1,7 @@
 # August List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-09-23  
+**Last updated:** 2026-09-28  
 **Next item number:** 45
 
 ## Rules
@@ -52,11 +52,11 @@
 30. ~~Review documentation on how to add templates in Confluence~~ — [Create a template](https://support.atlassian.com/confluence-cloud/docs/create-a-template/)
 31. ~~Create SKRULL tickets to document ADINC jobs in [Databricks DBX](https://disney-enterprise.atlassian.net/wiki/spaces/DDPAE/pages/2938542228/Databricks+DBX)~~
 32. ~~Check shared mailbox on ADINC subscription~~ — review shared mailbox documentation — [Teams message](https://teams.microsoft.com/l/message/19:6685b178-7f01-40c8-93e2-5de8ee968711_90c2c1dd-d813-4643-a8e5-f3aa635fc4ef@unq.gbl.spaces/1788974708763?context=%7B%22contextType%22%3A%22chat%22%7D)
-33. Follow up with MSTR on 2-year contract renewal — [Teams chat](https://teams.microsoft.com/l/chat/19:0b7cd08d164840d1945d1585f31c5b80@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-34. Review and plan Analytics EPICs
-35. Review INC Document — [Ads Data INC Process](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192842190/Ads+Data+INC+Process) — [SharePoint doc](https://twdc-my.sharepoint.com/:w:/r/personal/christopher_shields_disney_com/_layouts/15/Doc.aspx?sourcedoc=%7BC49CA717-070E-4BBA-BC33-360C6627BF3F%7D&file=Ads%20Data%20INC%20Process.docx&action=default&mobileredirect=true&isSPOFile=1&ovuser=56b731a8-a2ac-4c32-bf6b-616810e913c6%2CFernando.C.Rivero%40disney.com&wdExp=TEAMS-TREATMENT&web=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjA4MTMxOTMyMSJ9) — [Teams thread](https://teams.microsoft.com/l/message/19:e16f7db4576c48b0956e965936d027b7@thread.v2/1789430977886?context=%7B%22contextType%22%3A%22chat%22%7D)
-36. Follow up on Tidal's SOX Security Findings - Cisco Tidal Enterprise Job Scheduler (BAPP0216672)
-37. Follow up on ADINC jobs/workbooks CICD
+33. ~~Follow up on Tidal's SOX Security Findings - Cisco Tidal Enterprise Job Scheduler (BAPP0216672)~~
+34. ~~Follow up on ADINC jobs/workbooks CICD~~
+35. Follow up with MSTR on 2-year contract renewal — [Teams chat](https://teams.microsoft.com/l/chat/19:0b7cd08d164840d1945d1585f31c5b80@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+36. Review and plan Analytics EPICs
+37. Review INC Document — [Ads Data INC Process](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192842190/Ads+Data+INC+Process) — [SharePoint doc](https://twdc-my.sharepoint.com/:w:/r/personal/christopher_shields_disney_com/_layouts/15/Doc.aspx?sourcedoc=%7BC49CA717-070E-4BBA-BC33-360C6627BF3F%7D&file=Ads%20Data%20INC%20Process.docx&action=default&mobileredirect=true&isSPOFile=1&ovuser=56b731a8-a2ac-4c32-bf6b-616810e913c6%2CFernando.C.Rivero%40disney.com&wdExp=TEAMS-TREATMENT&web=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjA4MTMxOTMyMSJ9) — [Teams thread](https://teams.microsoft.com/l/message/19:e16f7db4576c48b0956e965936d027b7@thread.v2/1789430977886?context=%7B%22contextType%22%3A%22chat%22%7D)
 38. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
 39. Document DBX Workbooks and jobs for ADINC
 40. Create a DataOps distribution list for future RCA notification routing
@@ -69,5 +69,5 @@
 
 ## Summary
 
-**Open:** 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44  
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+**Open:** 35, 36, 37, 38, 39, 40, 41, 42, 43, 44  
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
