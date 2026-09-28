@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-09-28  
-**Next item number:** 45
+**Next item number:** 47
 
 ## Rules
 
@@ -64,10 +64,12 @@
 42. Review email 'Manual Tasks - Data Ops' for automation efforts
 43. Check DBX ADINC Dashboard subscription for shared mailbox
 44. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
+45. Establish guidelines to approve DataOps Monitors in PRD
+46. Request MSTR containerized migration plan
 
 ---
 
 ## Summary
 
-**Open:** 35, 36, 37, 38, 39, 40, 41, 42, 43, 44  
+**Open:** 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
