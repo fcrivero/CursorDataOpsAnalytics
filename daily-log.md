@@ -21,7 +21,7 @@
 ## Full List
 
 1. Follow up with MSTR on 2-year contract renewal — [Teams chat](https://teams.microsoft.com/l/chat/19:0b7cd08d164840d1945d1585f31c5b80@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-2. Review and plan Analytics EPICs
+2. Review and plan Analytics EPICs with Infra focus
 3. Review INC Document — [Ads Data INC Process](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192842190/Ads+Data+INC+Process) — [SharePoint doc](https://twdc-my.sharepoint.com/:w:/r/personal/christopher_shields_disney_com/_layouts/15/Doc.aspx?sourcedoc=%7BC49CA717-070E-4BBA-BC33-360C6627BF3F%7D&file=Ads%20Data%20INC%20Process.docx&action=default&mobileredirect=true&isSPOFile=1&ovuser=56b731a8-a2ac-4c32-bf6b-616810e913c6%2CFernando.C.Rivero%40disney.com&wdExp=TEAMS-TREATMENT&web=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjA4MTMxOTMyMSJ9) — [Teams thread](https://teams.microsoft.com/l/message/19:e16f7db4576c48b0956e965936d027b7@thread.v2/1789430977886?context=%7B%22contextType%22%3A%22chat%22%7D)
 4. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
 5. Document DBX Workbooks and jobs for ADINC
