@@ -7,8 +7,9 @@ Personal workspace for todo tracking via Cursor Cloud Agent.
 | File | Purpose |
 | ---- | ------- |
 | [`personal-todo.md`](personal-todo.md) | Personal / life todo list (source of truth) |
-| [`daily-log.md`](daily-log.md) | Work DataOps / Analytics daily activity and todo list (current month) |
+| [`daily-log.md`](daily-log.md) | Work DataOps / Analytics daily activity and todo list (current month — October 2026) |
 | [`july-log.md`](july-log.md) | Frozen monthly archive (July 2026) |
+| [`august-log.md`](august-log.md) | Frozen monthly archive (closed August & September 2026 items) |
 | [`scripts/sync-log.sh`](scripts/sync-log.sh) | Auto-sync helper: stage logs, commit, and push |
 | [`AGENTS.md`](AGENTS.md) | Instructions for Cursor / Cloud Agent sessions |
 
