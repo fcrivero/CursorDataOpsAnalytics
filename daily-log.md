@@ -1,8 +1,8 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-01  
-**Next item number:** 16
+**Last updated:** 2026-10-02  
+**Next item number:** 18
 
 ## Rules
 
@@ -35,10 +35,12 @@
 13. Follow up with streaming license count reduction
 14. Sync audit skills to team repo
 15. Include @dataops-leads to MS Teams output for missing RCA
+16. MSTR API token rotation automation
+17. Undo package automation
 
 ---
 
 ## Summary
 
-**Open:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15  
+**Open:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17  
 **Done:** (none yet)
