@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-10-07  
-**Next item number:** 19
+**Next item number:** 20
 
 ## Rules
 
@@ -38,10 +38,11 @@
 16. MSTR API token rotation automation
 17. Undo package automation
 18. Prepare Analytics job description and reasons for an EST/PST resource
+19. Review Monte Carlo docs — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
 
 ---
 
 ## Summary
 
-**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
+**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19  
 **Done:** 1, 2, 3, 4
