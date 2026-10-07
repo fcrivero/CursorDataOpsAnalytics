@@ -1,8 +1,8 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-02  
-**Next item number:** 18
+**Last updated:** 2026-10-07  
+**Next item number:** 19
 
 ## Rules
 
@@ -37,10 +37,11 @@
 15. Include @dataops-leads to MS Teams output for missing RCA
 16. MSTR API token rotation automation
 17. Undo package automation
+18. Prepare Analytics job description and reasons for an EST/PST resource
 
 ---
 
 ## Summary
 
-**Open:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17  
+**Open:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18  
 **Done:** (none yet)
