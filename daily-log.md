@@ -1,8 +1,8 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-07  
-**Next item number:** 22
+**Last updated:** 2026-10-12  
+**Next item number:** 28
 
 ## Rules
 
@@ -41,10 +41,16 @@
 19. Review Monte Carlo docs — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
 20. Review and audit pipelines documentation to align with proposed standards
 21. Update RCA template with defect introduction date/time field and share with dev teams — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+22. Prepare feedback for Kaustubh
+23. Create Monte Carlo Epic for SKRULL
+24. Meet with Vijay for PD
+25. Schedule meeting to review MTTD with DEV and Chris Shields
+26. Review Monte Carlo Standards
+27. Schedule MSTR Oct ONE Update
 
 ---
 
 ## Summary
 
-**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21  
+**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27  
 **Done:** 1, 2, 3, 4
