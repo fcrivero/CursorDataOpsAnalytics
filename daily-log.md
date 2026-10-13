@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-10-13  
-**Next item number:** 32
+**Next item number:** 35
 
 ## Rules
 
@@ -30,11 +30,11 @@
 8. ~~Prepare Analytics job description and reasons for an EST/PST resource~~
 9. ~~Review and audit pipelines documentation to align with proposed standards~~
 10. ~~Meet with Vijay for PD~~
-11. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
-12. Document DBX Workbooks and jobs for ADINC
-13. Create a DataOps distribution list for future RCA notification routing
-14. Review email 'Manual Tasks - Data Ops' for automation efforts
-15. Check DBX ADINC Dashboard subscription for shared mailbox
+11. ~~Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views~~
+12. ~~Check DBX ADINC Dashboard subscription for shared mailbox~~
+13. Document DBX Workbooks and jobs for ADINC
+14. Create a DataOps distribution list for future RCA notification routing
+15. Review email 'Manual Tasks - Data Ops' for automation efforts
 16. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
 17. Establish guidelines to approve DataOps Monitors in PRD
 18. Follow up with streaming license count reduction
@@ -51,10 +51,13 @@
 29. Add explicit rules for retaining and categorizing false positives instead of deleting them
 30. Create a visual decision tree for incident classification and ticket handling
 31. Update DataOps team and schedule proposal meeting with Chris Shields — [Teams thread](https://teams.microsoft.com/l/message/19:meeting_Nzc0ZDE3YWMtYTYxOS00NDJhLWEwNjItMjkzODFkOWMxZGRl@thread.v2/1791905928166?context=%7B%22contextType%22%3A%22chat%22%7D)
+32. Update Power Automate Flow that saves ADINC PDF to use shared mailbox
+33. Update Power Automate Flow that sends MS Teams RCA message to use shared mailbox
+34. Document Power Automate Flow to send MS Teams messages on RCA
 
 ---
 
 ## Summary
 
-**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31  
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+**Open:** 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34  
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
