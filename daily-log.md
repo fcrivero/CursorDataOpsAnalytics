@@ -24,26 +24,26 @@
 2. ~~Review and plan Analytics EPICs with Infra focus~~
 3. ~~Enable the Power Automate flow after successful validation of RCA notification testing~~
 4. ~~Include @dataops-leads to MS Teams output for missing RCA~~
-5. Review INC Document — [Ads Data INC Process](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192842190/Ads+Data+INC+Process) — [SharePoint doc](https://twdc-my.sharepoint.com/:w:/r/personal/christopher_shields_disney_com/_layouts/15/Doc.aspx?sourcedoc=%7BC49CA717-070E-4BBA-BC33-360C6627BF3F%7D&file=Ads%20Data%20INC%20Process.docx&action=default&mobileredirect=true&isSPOFile=1&ovuser=56b731a8-a2ac-4c32-bf6b-616810e913c6%2CFernando.C.Rivero%40disney.com&wdExp=TEAMS-TREATMENT&web=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjA4MTMxOTMyMSJ9) — [Teams thread](https://teams.microsoft.com/l/message/19:e16f7db4576c48b0956e965936d027b7@thread.v2/1789430977886?context=%7B%22contextType%22%3A%22chat%22%7D)
-6. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
-7. Document DBX Workbooks and jobs for ADINC
-8. Create a DataOps distribution list for future RCA notification routing
-9. Review email 'Manual Tasks - Data Ops' for automation efforts
-10. Check DBX ADINC Dashboard subscription for shared mailbox
-11. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
-12. Establish guidelines to approve DataOps Monitors in PRD
-13. Request MSTR containerized migration plan
-14. Follow up with streaming license count reduction
-15. Sync audit skills to team repo
-16. MSTR API token rotation automation
-17. Undo package automation
-18. Prepare Analytics job description and reasons for an EST/PST resource
-19. Review Monte Carlo docs — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-20. Review and audit pipelines documentation to align with proposed standards
-21. Update RCA template with defect introduction date/time field and share with dev teams — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-22. Prepare feedback for Kaustubh
-23. Create Monte Carlo Epic for SKRULL
-24. Meet with Vijay for PD
+5. ~~Review INC Document~~ — [Ads Data INC Process](https://disney-enterprise.atlassian.net/wiki/spaces/ADSO/pages/192842190/Ads+Data+INC+Process) — [SharePoint doc](https://twdc-my.sharepoint.com/:w:/r/personal/christopher_shields_disney_com/_layouts/15/Doc.aspx?sourcedoc=%7BC49CA717-070E-4BBA-BC33-360C6627BF3F%7D&file=Ads%20Data%20INC%20Process.docx&action=default&mobileredirect=true&isSPOFile=1&ovuser=56b731a8-a2ac-4c32-bf6b-616810e913c6%2CFernando.C.Rivero%40disney.com&wdExp=TEAMS-TREATMENT&web=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjA4MTMxOTMyMSJ9) — [Teams thread](https://teams.microsoft.com/l/message/19:e16f7db4576c48b0956e965936d027b7@thread.v2/1789430977886?context=%7B%22contextType%22%3A%22chat%22%7D)
+6. ~~Request MSTR containerized migration plan~~
+7. ~~Sync audit skills to team repo~~
+8. ~~Prepare Analytics job description and reasons for an EST/PST resource~~
+9. ~~Review and audit pipelines documentation to align with proposed standards~~
+10. ~~Meet with Vijay for PD~~
+11. Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views
+12. Document DBX Workbooks and jobs for ADINC
+13. Create a DataOps distribution list for future RCA notification routing
+14. Review email 'Manual Tasks - Data Ops' for automation efforts
+15. Check DBX ADINC Dashboard subscription for shared mailbox
+16. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
+17. Establish guidelines to approve DataOps Monitors in PRD
+18. Follow up with streaming license count reduction
+19. MSTR API token rotation automation
+20. Undo package automation
+21. Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
+22. Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+23. Prepare feedback for Kaustubh
+24. Create Monte Carlo Epic for SKRULL
 25. Schedule meeting to review MTTD with DEV and Chris Shields
 26. Review Monte Carlo Standards
 27. Schedule MSTR Oct ONE Update
@@ -56,5 +56,5 @@
 
 ## Summary
 
-**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31  
-**Done:** 1, 2, 3, 4
+**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31  
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
