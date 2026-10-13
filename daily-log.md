@@ -1,8 +1,8 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-12  
-**Next item number:** 28
+**Last updated:** 2026-10-13  
+**Next item number:** 32
 
 ## Rules
 
@@ -47,10 +47,14 @@
 25. Schedule meeting to review MTTD with DEV and Chris Shields
 26. Review Monte Carlo Standards
 27. Schedule MSTR Oct ONE Update
+28. Update the incident lifecycle proposal with the agreed P1, P2, P3, and proposed P4 definitions
+29. Add explicit rules for retaining and categorizing false positives instead of deleting them
+30. Create a visual decision tree for incident classification and ticket handling
+31. Update DataOps team and schedule proposal meeting with Chris Shields — [Teams thread](https://teams.microsoft.com/l/message/19:meeting_Nzc0ZDE3YWMtYTYxOS00NDJhLWEwNjItMjkzODFkOWMxZGRl@thread.v2/1791905928166?context=%7B%22contextType%22%3A%22chat%22%7D)
 
 ---
 
 ## Summary
 
-**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27  
+**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31  
 **Done:** 1, 2, 3, 4
