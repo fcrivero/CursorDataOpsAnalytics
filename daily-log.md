@@ -1,8 +1,8 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-13  
-**Next item number:** 33
+**Last updated:** 2026-10-14  
+**Next item number:** 34
 
 ## Rules
 
@@ -52,10 +52,11 @@
 30. Update Power Automate Flow that saves ADINC PDF to use shared mailbox
 31. Update Power Automate Flow that sends MS Teams RCA message to use shared mailbox
 32. Document Power Automate Flow to send MS Teams messages on RCA
+33. Update RCA template and automation script (create SKRULL and assign to Amrita)
 
 ---
 
 ## Summary
 
-**Open:** 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32  
+**Open:** 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
