@@ -32,14 +32,14 @@
 10. ~~Meet with Vijay for PD~~
 11. ~~Contact Matias Infante regarding recreation of the Jira epic dashboard and quarterly epic views~~
 12. ~~Check DBX ADINC Dashboard subscription for shared mailbox~~
-13. Document DBX Workbooks and jobs for ADINC
-14. Create a DataOps distribution list for future RCA notification routing
-15. Review email 'Manual Tasks - Data Ops' for automation efforts
-16. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
-17. Establish guidelines to approve DataOps Monitors in PRD
-18. Follow up with streaming license count reduction
-19. MSTR API token rotation automation
-20. Undo package automation
+13. ~~Document DBX Workbooks and jobs for ADINC~~
+14. ~~Follow up with streaming license count reduction~~
+15. ~~MSTR API token rotation automation~~
+16. ~~Undo package automation~~
+17. Create a DataOps distribution list for future RCA notification routing
+18. Review email 'Manual Tasks - Data Ops' for automation efforts
+19. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
+20. Establish guidelines to approve DataOps Monitors in PRD
 21. Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
 22. Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 23. Prepare feedback for Kaustubh
@@ -65,5 +65,5 @@
 
 ## Summary
 
-**Open:** 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40  
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+**Open:** 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40  
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
