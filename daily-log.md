@@ -1,8 +1,8 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-15  
-**Next item number:** 35
+**Last updated:** 2026-10-20  
+**Next item number:** 41
 
 ## Rules
 
@@ -54,10 +54,16 @@
 32. Document Power Automate Flow to send MS Teams messages on RCA
 33. Update RCA template and automation script (create SKRULL and assign to Amrita)
 34. Work on a proposal for Analytics Resources and share with Vijay
+35. Plan SKRULL roadmap
+36. Plan Analytics roadmap
+37. Add "Define how mandatory documentation fields should factor into completeness/coverage criteria" to audit skill
+38. Update skill to make DQ optional and HTML agnostic
+39. Sync skills to team repo afterwards
+40. Schedule meeting with Chris to review RCA doc
 
 ---
 
 ## Summary
 
-**Open:** 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34  
+**Open:** 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40  
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
