@@ -23,10 +23,10 @@ The script stages the log files (`personal-todo.md`, `daily-log.md`, and any `*-
 These rules keep the list ordered and gap-free after every edit:
 
 - **Cross-out → resort + renumber:** every time an item is crossed out, drop any `**In progress**` legend and immediately **resort and renumber** the full list.
-- **Resort order:** group into three tiers and renumber `1…N` with **no gaps** — **In progress** items first (top), then **Done** (crossed out), then not-started **Open** items last. Keep existing relative order within each tier.
+- **Resort order:** group into three tiers and renumber `1…N` with **no gaps** — **Done** (crossed out) first, then **In progress**, then not-started **Open** items last. Keep existing relative order within each tier.
 - **Consolidate → merge + delete duplicate:** when two items are duplicates, merge them into one line (keep all links) and delete the duplicate. **Never** leave placeholder lines like "Consolidated into #X".
-- **In progress:** when the user asks to mark an item as in progress, add the legend `**In progress**` at the start of the line (right after the number), before the item text — e.g. `1. **In progress** Create a DataOps distribution list…` — then **resort + renumber** so in-progress items move to the top tier. In-progress items are not done. Remove the legend when the item is completed (cross it out and resort) or when the user asks to clear it.
-- Always update the **"Next item number"** header and the **Summary** (In progress / Open / Done) after resorting.
+- **In progress:** when the user asks to mark an item as in progress, add the legend `**In progress**` at the start of the line (right after the number), before the item text — e.g. `17. **In progress** Create a DataOps distribution list…` — then **resort + renumber** so in-progress items sit in the middle tier (after Done, before not-started Open). In-progress items are not done. Remove the legend when the item is completed (cross it out and resort) or when the user asks to clear it.
+- Always update the **"Next item number"** header and the **Summary** (Done / In progress / Open) after resorting.
 
 ---
 
