@@ -45,16 +45,16 @@
 21. ~~Update DataOps team and schedule proposal meeting with Chris Shields~~ — [Teams thread](https://teams.microsoft.com/l/message/19:meeting_Nzc0ZDE3YWMtYTYxOS00NDJhLWEwNjItMjkzODFkOWMxZGRl@thread.v2/1791905928166?context=%7B%22contextType%22%3A%22chat%22%7D)
 22. ~~Work on a proposal for Analytics Resources and share with Vijay~~
 23. ~~Schedule meeting with Chris to review RCA doc~~
-24. **In progress** Create a DataOps distribution list for future RCA notification routing
-25. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-26. **In progress** Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-27. **In progress** Create Monte Carlo Epic for SKRULL
-28. **In progress** Schedule MSTR Oct ONE Update
-29. Review email 'Manual Tasks - Data Ops' for automation efforts
-30. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
-31. Establish guidelines to approve DataOps Monitors in PRD
-32. Update Power Automate Flow that saves ADINC PDF to use shared mailbox
-33. Update Power Automate Flow that sends MS Teams RCA message to use shared mailbox
+24. ~~Update Power Automate Flow that saves ADINC PDF to use shared mailbox~~
+25. ~~Update Power Automate Flow that sends MS Teams RCA message to use shared mailbox~~
+26. **In progress** Create a DataOps distribution list for future RCA notification routing
+27. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
+28. **In progress** Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+29. **In progress** Create Monte Carlo Epic for SKRULL
+30. **In progress** Schedule MSTR Oct ONE Update
+31. Review email 'Manual Tasks - Data Ops' for automation efforts
+32. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
+33. Establish guidelines to approve DataOps Monitors in PRD
 34. Document Power Automate Flow to send MS Teams messages on RCA
 35. Update RCA template and automation script (create SKRULL and assign to Amrita)
 36. Plan SKRULL roadmap
@@ -67,6 +67,6 @@
 
 ## Summary
 
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23  
-**In progress:** 24, 25, 26, 27, 28  
-**Open:** 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25  
+**In progress:** 26, 27, 28, 29, 30  
+**Open:** 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
