@@ -25,6 +25,7 @@ These rules keep the list ordered and gap-free after every edit:
 - **Cross-out → resort + renumber:** every time an item is crossed out, move it into the done section and immediately **resort and renumber** the full list.
 - **Resort order:** done items first (numbered `1…N`), then open items (`N+1…`). Renumber every item so numbers run `1` through the last open item with **no gaps**.
 - **Consolidate → merge + delete duplicate:** when two items are duplicates, merge them into one line (keep all links) and delete the duplicate. **Never** leave placeholder lines like "Consolidated into #X".
+- **In progress:** when the user asks to mark an item as in progress, add the legend `**In progress**` at the start of the line (right after the number), before the item text — e.g. `17. **In progress** Create a DataOps distribution list…`. In-progress items stay in the open section (they are not done). Remove the legend when the item is completed (cross it out and resort) or when the user asks to clear it.
 - Always update the **"Next item number"** header and the **Summary** (Open / Done) after resorting.
 
 ---
