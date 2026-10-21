@@ -1,7 +1,7 @@
 # October List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-10-20  
+**Last updated:** 2026-10-21  
 **Next item number:** 41
 
 ## Rules
@@ -36,15 +36,15 @@
 14. ~~Follow up with streaming license count reduction~~
 15. ~~MSTR API token rotation automation~~
 16. ~~Undo package automation~~
-17. Create a DataOps distribution list for future RCA notification routing
+17. **In progress** Create a DataOps distribution list for future RCA notification routing
 18. Review email 'Manual Tasks - Data Ops' for automation efforts
 19. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
 20. Establish guidelines to approve DataOps Monitors in PRD
-21. Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-22. Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+21. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
+22. **In progress** Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 23. Prepare feedback for Kaustubh
-24. Create Monte Carlo Epic for SKRULL
-25. Schedule MSTR Oct ONE Update
+24. **In progress** Create Monte Carlo Epic for SKRULL
+25. **In progress** Schedule MSTR Oct ONE Update
 26. Update the incident lifecycle proposal with the agreed P1, P2, P3, and proposed P4 definitions
 27. Add explicit rules for retaining and categorizing false positives instead of deleting them
 28. Create a visual decision tree for incident classification and ticket handling
