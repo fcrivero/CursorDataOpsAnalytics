@@ -51,10 +51,10 @@
 27. ~~Add "Define how mandatory documentation fields should factor into completeness/coverage criteria" to audit skill~~
 28. ~~Update skill to make DQ optional and HTML agnostic~~
 29. ~~Sync skills to team repo afterwards~~
-30. **In progress** Create a DataOps distribution list for future RCA notification routing
-31. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-32. **In progress** Present RCA Template to Chris Shields — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-33. **In progress** Create Monte Carlo Epic for SKRULL
+30. ~~Create a DataOps distribution list for future RCA notification routing~~
+31. ~~Present RCA Template to Chris Shields~~ — [Teams thread](https://teams.microsoft.com/l/chat/19:meeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx@thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+32. ~~Create Monte Carlo Epic for SKRULL~~
+33. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
 34. **In progress** Schedule MSTR Oct ONE Update
 35. Review email 'Manual Tasks - Data Ops' for automation efforts
 36. Schedule Monthly Data Enablement - Data Operations Road map and prioritization
@@ -67,6 +67,6 @@
 
 ## Summary
 
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29  
-**In progress:** 30, 31, 32, 33, 34  
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32  
+**In progress:** 33, 34  
 **Open:** 35, 36, 37, 38, 39, 40
