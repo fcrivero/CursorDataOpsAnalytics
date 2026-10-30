@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-10-28  
-**Next item number:** 41
+**Next item number:** 42
 
 ## Rules
 
@@ -62,6 +62,7 @@
 38. Document Power Automate Flow to send MS Teams messages on RCA
 39. Update RCA template and automation script (create SKRULL and assign to Amrita)
 40. Plan SKRULL roadmap
+41. Undo package migration to PRD
 
 ---
 
@@ -69,4 +70,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32  
 **In progress:** 33, 34  
-**Open:** 35, 36, 37, 38, 39, 40
+**Open:** 35, 36, 37, 38, 39, 40, 41
