@@ -43,6 +43,10 @@ $gitCred = @('-c', 'credential.helper=', '-c', 'credential.helper=!gh auth git-c
 
 foreach ($ref in $twdcBranches) {
     $branch = $ref -replace '^twdc/', ''
+    if ($branch -eq 'main') {
+        Write-Host "Skipping main (personal main may include MIRROR.md); sync other branches from TWDC."
+        continue
+    }
     Write-Host "Pushing branch $branch -> origin ..."
     & git @gitCred -C $ClonePath push origin "refs/remotes/twdc/${branch}:refs/heads/${branch}"
 }

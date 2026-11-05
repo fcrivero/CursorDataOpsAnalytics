@@ -16,7 +16,7 @@ Mirror **source of truth (enterprise):**
 **Personal backup:**  
 `https://github.com/fcrivero/AnalyticsScripts` (**private**)
 
-Primary script content lives on branch **`mstr-admin-scripts`** (AWS/OnPrem/MSTR scripts). **`main`** may only contain a stub README on TWDC — still mirror **all** branches.
+Primary script content lives on branch **`mstr-admin-scripts`** (AWS/OnPrem/MSTR scripts). **`main`** on TWDC is a stub README; personal **`main`** may add [`MIRROR.md`](https://github.com/fcrivero/AnalyticsScripts/blob/main/MIRROR.md) — the sync script **skips `main`** so that file is not overwritten.
 
 ## Prerequisites
 
