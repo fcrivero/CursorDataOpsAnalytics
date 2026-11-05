@@ -1,2 +1,6 @@
 node_modules/
 npm-debug.log*
+
+# Skill run artifacts (never commit live Jira/audit snapshots)
+.cursor/skills/**/__pycache__/
+.cursor/skills/**/reports/

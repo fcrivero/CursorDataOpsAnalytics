@@ -12,6 +12,7 @@ Personal workspace for todo tracking via Cursor Cloud Agent.
 | [`august-log.md`](august-log.md) | Frozen monthly archive (closed August & September 2026 items) |
 | [`scripts/sync-log.sh`](scripts/sync-log.sh) | Auto-sync helper: stage logs, commit, and push |
 | [`AGENTS.md`](AGENTS.md) | Instructions for Cursor / Cloud Agent sessions |
+| [`.cursor/skills/`](.cursor/skills/) | Author-maintained **DataOps (SKRULL/ADINC/PD)** and **Analytics (ADIA)** Cursor skills — see [`.cursor/skills/README.md`](.cursor/skills/README.md) |
 
 ## Usage
 
