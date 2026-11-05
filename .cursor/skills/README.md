@@ -1,41 +1,39 @@
-# Cursor skills — DataOps (SKRULL) & Analytics (ADIA)
+# Cursor skills — Fernando Rivero (author backup)
 
-Author-maintained agent skills copied from `~/.cursor/skills`. Install by syncing this folder into your Cursor skills path (or symlink):
+Complete backup of **author-maintained** skills from `~/.cursor/skills` (excludes AIX/AdPlatform bundles, `selection/*`, and third-party skills such as `jira-audit`, `ai-jira-estimate`).
 
-```powershell
-# Example: mirror into user skills (review diff first)
-robocopy "%USERPROFILE%\.cursor\skills-source\CursorDataOpsAnalytics\.cursor\skills" "%USERPROFILE%\.cursor\skills" /E
-```
+Install: copy or robocopy this folder into your Cursor skills path. Shared ADINC docs: [`adinc-jira-notes.md`](adinc-jira-notes.md), [`adinc-jira-dates.md`](adinc-jira-dates.md).
 
-After clone, point the source at this repo:  
-`C:\Users\rivef104\Documents\AI\CursorDataOpsAnalytics\.cursor\skills`
+## Inventory (21 skills)
 
-Shared ADINC references: [`adinc-jira-notes.md`](adinc-jira-notes.md), [`adinc-jira-dates.md`](adinc-jira-dates.md) (linked as `../adinc-jira-notes.md` / `../adinc-jira-dates.md` from skill folders).
+| Skill | Team / process |
+| ----- | -------------- |
+| `adinc-incident-html-report` | DataOps — ADINC metrics HTML dashboard |
+| `confluence-adinc-history` | DataOps — ADINC → Confluence RCA |
+| `dataops-pd-incident-analysis` | DataOps — single PD incident analysis |
+| `dataops-pd-incidents` | DataOps — PD incident list |
+| `dataops-pd-long-run` | DataOps — Long Run PD triage |
+| `dataops-shift-summary` | DataOps — shift executive summary |
+| `jira-adinc-audit` | DataOps — ADINC ticket audit |
+| `jira-adinc-tickets` | DataOps — ADINC ticket create/update |
+| `jira-skrull-audit` | DataOps / SKRULL — board hygiene audit |
+| `jira-skrull-tickets` | DataOps / SKRULL — story/task creation |
+| `oncall-handoff-incidents` | DataOps — on-call handoff |
+| `pagerduty-incident-identity` | DataOps — PD incident safety rules |
+| `pipeline-docs-audit` | DataOps — Confluence pipeline doc standard |
+| `adia-status-report` | Analytics (ADIA) — status report |
+| `jira-adia-tickets` | Analytics (ADIA) — ticket creation |
+| `focus-plan` | Personal / work planning — weekly Confluence focus plan |
+| `jira-closure` | Cross-team — closure notes → Teams |
+| `meeting-action-items-report` | Cross-team — Cerebro action items by attendee |
+| `meeting-notes-ingest` | Cross-team — Teams transcript → daily log |
+| `mcp-health` | Tooling — MCP + AIX connectivity audit |
+| `rds-query` | Tooling — AWS RDS (Xwing/MSTR) read-only SQL |
 
-## DataOps / SKRULL / ADINC / PagerDuty
+## MCP / CLI (typical)
 
-| Skill | Purpose |
-| ----- | ------- |
-| `adinc-incident-html-report` | Standalone Ads Data ADINC metrics HTML report (MTTR/MTTM/MTTD, KPIs, charts) |
-| `confluence-adinc-history` | Publish closed ADINC tickets to Confluence Incident History |
-| `dataops-pd-incident-analysis` | Deep dive on one PagerDuty Data Ops incident |
-| `dataops-pd-incidents` | List Data Ops PD incidents for a time window |
-| `dataops-pd-long-run` | Triage `[Long Run]` PagerDuty alerts |
-| `dataops-shift-summary` | Executive Data Ops shift summary |
-| `jira-adinc-audit` | Audit ADINC ticket fields and RCA |
-| `jira-adinc-tickets` | Create/update ADINC tickets |
-| `jira-skrull-audit` | SKRULL board hygiene audit (scripts + Excel template) |
-| `jira-skrull-tickets` | Create SKRULL stories and tasks |
-| `oncall-handoff-incidents` | High-urgency on-call handoff summary |
-| `pagerduty-incident-identity` | Safety rules before PD incident fetch/mutate |
+Per skill: `user-jira-server`, `user-pagerduty-mcp-manual`, `user-ads-databricks`, `user-confluence-disney`, `user-ads-cerebro-qa`, Teams/Outlook AIX CLIs, etc. See each `SKILL.md`.
 
-## Analytics (ADIA)
+## Excluded from this backup (not author-owned)
 
-| Skill | Purpose |
-| ----- | ------- |
-| `adia-status-report` | ADIA Jira status report for a period; optional Teams post |
-| `jira-adia-tickets` | Create ADIA Jira stories/tasks |
-
-## MCP servers typically required
-
-`user-jira-server`, `user-pagerduty-mcp-manual`, `user-ads-databricks`, `user-confluence-disney` (per skill). Teams/outlook CLIs where noted in each `SKILL.md`.
+AIX CLIs (`teams-cli`, `dbx-cli`, …), AdPlatform templates (`adplatform-code-review`, `documentation`, …), `selection/*` workflow skills, John Jenkins / AIX skills (`jira-audit`, `audit-docs`, …).
