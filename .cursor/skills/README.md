@@ -4,7 +4,7 @@ Complete backup of **author-maintained** skills from `~/.cursor/skills` (exclude
 
 Install: copy or robocopy this folder into your Cursor skills path. Shared ADINC docs: [`adinc-jira-notes.md`](adinc-jira-notes.md), [`adinc-jira-dates.md`](adinc-jira-dates.md).
 
-## Inventory (21 skills)
+## Inventory (22 skills)
 
 | Skill | Team / process |
 | ----- | -------------- |
@@ -29,6 +29,7 @@ Install: copy or robocopy this folder into your Cursor skills path. Shared ADINC
 | `meeting-notes-ingest` | Cross-team — Teams transcript → daily log |
 | `mcp-health` | Tooling — MCP + AIX connectivity audit |
 | `rds-query` | Tooling — AWS RDS (Xwing/MSTR) read-only SQL |
+| `analytics-scripts-sync` | Git — mirror TWDC `AdPlatformV2/analytics` → `fcrivero/AnalyticsScripts` |
 
 ## MCP / CLI (typical)
 
