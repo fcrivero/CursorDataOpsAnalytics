@@ -10,12 +10,13 @@ robocopy "%USERPROFILE%\.cursor\skills-source\CursorDataOpsAnalytics\.cursor\ski
 After clone, point the source at this repo:  
 `C:\Users\rivef104\Documents\AI\CursorDataOpsAnalytics\.cursor\skills`
 
-Shared ADINC reference: [`adinc-jira-notes.md`](adinc-jira-notes.md) (linked as `../adinc-jira-notes.md` from skill folders).
+Shared ADINC references: [`adinc-jira-notes.md`](adinc-jira-notes.md), [`adinc-jira-dates.md`](adinc-jira-dates.md) (linked as `../adinc-jira-notes.md` / `../adinc-jira-dates.md` from skill folders).
 
 ## DataOps / SKRULL / ADINC / PagerDuty
 
 | Skill | Purpose |
 | ----- | ------- |
+| `adinc-incident-html-report` | Standalone Ads Data ADINC metrics HTML report (MTTR/MTTM/MTTD, KPIs, charts) |
 | `confluence-adinc-history` | Publish closed ADINC tickets to Confluence Incident History |
 | `dataops-pd-incident-analysis` | Deep dive on one PagerDuty Data Ops incident |
 | `dataops-pd-incidents` | List Data Ops PD incidents for a time window |
