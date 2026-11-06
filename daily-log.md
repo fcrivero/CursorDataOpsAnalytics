@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-10-28  
-**Next item number:** 46
+**Next item number:** 47
 
 ## Rules
 
@@ -67,6 +67,7 @@
 43. Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [Teams chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 44. Work on fleet engineering status report
 45. Work on weekly fleet report on new channel — [Teams channel](https://teams.microsoft.com/l/channel/19%3Ade9c52b337d443f285a6a0d14ac03f53%40thread.tacv2/Foundations%20Engineering%20-%20Weekly%20Status?groupId=dbe9c893-2d06-4b1c-8179-47e659184434&tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6)
+46. Obtain list of pipelines for ACP DCM release — [Teams thread](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1793827309517?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1793827309517&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support)
 
 ---
 
@@ -74,4 +75,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32  
 **In progress:** 33, 34  
-**Open:** 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45
+**Open:** 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46
