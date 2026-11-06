@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-10-28  
-**Next item number:** 43
+**Next item number:** 44
 
 ## Rules
 
@@ -64,6 +64,7 @@
 40. Plan SKRULL roadmap
 41. Undo package migration to PRD
 42. License check to AWS QA and UAT
+43. Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [Teams chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 
 ---
 
@@ -71,4 +72,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32  
 **In progress:** 33, 34  
-**Open:** 35, 36, 37, 38, 39, 40, 41, 42
+**Open:** 35, 36, 37, 38, 39, 40, 41, 42, 43
