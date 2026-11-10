@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-06  
-**Next item number:** 50
+**Next item number:** 51
 
 ## Rules
 
@@ -71,6 +71,7 @@
 47. Agree on RCA format with Chris — [Teams chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 48. Create technical documentation and architecture for email updating script for self serve in MSTR
 49. Check License check script into Analytics "Architect" repository
+50. Complete AI team sheet — [Teams chat](https://teams.microsoft.com/l/chat/19%3Aaf12d328b53046fd998dc0a0897d3c99%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 
 ---
 
@@ -78,4 +79,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32  
 **In progress:** 33, 34, 35, 36, 37, 38  
-**Open:** 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49
+**Open:** 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
