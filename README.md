@@ -7,9 +7,10 @@ Personal workspace for todo tracking via Cursor Cloud Agent.
 | File | Purpose |
 | ---- | ------- |
 | [`personal-todo.md`](personal-todo.md) | Personal / life todo list (source of truth) |
-| [`daily-log.md`](daily-log.md) | Work DataOps / Analytics daily activity and todo list (current month — October 2026) |
+| [`daily-log.md`](daily-log.md) | Work DataOps / Analytics daily activity and todo list (current month — November 2026) |
 | [`july-log.md`](july-log.md) | Frozen monthly archive (July 2026) |
 | [`august-log.md`](august-log.md) | Frozen monthly archive (closed August & September 2026 items) |
+| [`october-log.md`](october-log.md) | Frozen monthly archive (closed October 2026 items) |
 | [`scripts/sync-log.sh`](scripts/sync-log.sh) | Auto-sync helper: stage logs, commit, and push |
 | [`AGENTS.md`](AGENTS.md) | Instructions for Cursor / Cloud Agent sessions |
 | [`.cursor/skills/`](.cursor/skills/) | Author-maintained **DataOps (SKRULL/ADINC/PD)** and **Analytics (ADIA)** Cursor skills — see [`.cursor/skills/README.md`](.cursor/skills/README.md) |
@@ -21,7 +22,7 @@ Personal workspace for todo tracking via Cursor Cloud Agent.
 3. Add, update, or cross out todos in chat; the agent updates the log file.
 4. The agent **auto-syncs** after every change via `scripts/sync-log.sh` (commit + push), so logs stay current across devices without a manual save.
 
-Each month is archived: the previous `daily-log.md` is frozen into `<month>-log.md` (e.g. `july-log.md`) and open items are carried forward into a fresh `daily-log.md`.
+Each month is archived: the previous month's completed items are frozen into `<month>-log.md` (e.g. `october-log.md`) and the in-progress and open items are carried forward into a fresh `daily-log.md`, renumbered from 1.
 
 ### Auto-sync
 

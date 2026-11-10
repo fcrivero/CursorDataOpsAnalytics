@@ -14,7 +14,7 @@ scripts/sync-log.sh ["optional commit message"]
 
 The script stages the log files (`personal-todo.md`, `daily-log.md`, and any `*-log.md` archive), commits when there are changes, and pushes the current branch. It is a no-op when nothing changed, so it is always safe to run.
 
-**Monthly archive:** at the start of a new month, freeze the previous month's `daily-log.md` into `<month>-log.md` (for example `july-log.md`), carry forward the open items into a fresh `daily-log.md`, and auto-sync.
+**Monthly rollover (do this automatically at the start of every new month):** freeze the previous month's completed (crossed-out) items into `<month>-log.md` (for example `october-log.md`), then start a **fresh** `daily-log.md` for the new month that carries forward **only the in-progress and open items**, renumbered from 1 (in-progress first, then open). Title it `<Month> List — Daily Activity & Todo Log`, point the archive link in both files at each other, and auto-sync. Do not wait for the user to ask — rolling over is expected at each month boundary.
 
 ---
 
