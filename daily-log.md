@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-10  
-**Next item number:** 12
+**Next item number:** 14
 
 ## Rules
 
@@ -34,6 +34,8 @@
 9. Obtain list of pipelines for ACP DCM release — [Teams thread](https://teams.microsoft.com/l/message/19:12cacc27e4424952bc5b7a5a02262a3a@thread.tacv2/1793827309517?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=3d4f02b8-61b5-4761-8e3e-38a44e26ffba&parentMessageId=1793827309517&teamName=Data%20Platform%20Enablement%20-%20Advertising%20Alliance&channelName=ap-dataenab-skrull-dataops-support)
 10. Create technical documentation and architecture for email updating script for self serve in MSTR
 11. Complete AI team sheet — [Teams chat](https://teams.microsoft.com/l/chat/19%3Aaf12d328b53046fd998dc0a0897d3c99%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+12. Provide feedback to Peter and Michelle
+13. Review/update DataOps skills with Dmytro
 
 ---
 
@@ -41,4 +43,4 @@
 
 **Done:** (none yet — October's completed items are in [`october-log.md`](october-log.md))  
 **In progress:** 1, 2, 3, 4  
-**Open:** 5, 6, 7, 8, 9, 10, 11
+**Open:** 5, 6, 7, 8, 9, 10, 11, 12, 13
