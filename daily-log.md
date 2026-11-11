@@ -26,7 +26,7 @@
 1. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
 2. **In progress** Schedule MSTR Oct ONE Update
 3. **In progress** Establish guidelines to approve DataOps Monitors in PRD
-4. **In progress** Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [Teams chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+4. **In progress** Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [ADINC & RCA agreements chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D) — [RCA Template chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 5. Document Power Automate Flow to send MS Teams messages on RCA
 6. Plan SKRULL roadmap
 7. Work on fleet engineering status report
