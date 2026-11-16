@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-16  
-**Next item number:** 20
+**Next item number:** 23
 
 ## Rules
 
@@ -42,6 +42,9 @@
 17. Reply to MSTR on CIDR for Upgrade and Container-based architecture
 18. Review Updated ADINC Metrics with Vijay and confirm their inclusion in the DBX dashboard
 19. Coordinate with Deepthi Konda on the infrastructure request once the OAuth/Jira-admin prerequisites are ready
+20. Contact Ritika to fix [DATAINF board](https://deept.atlassian.net/jira/software/projects/DATAINF/apps/94d5de1a-112d-4549-bd03-5f910d5fd27b/880424a7-af14-4c77-b446-5ef9feee797a/structure/board/4256) and add ADIA project
+21. Schedule a meeting with Frank and Darren to align on Ps and INC metrics
+22. Create a list of initiatives for SKRULL and ADIA for CAPEX work
 
 ---
 
@@ -49,4 +52,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6  
 **In progress:** 7, 8, 9, 10  
-**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19
+**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22
