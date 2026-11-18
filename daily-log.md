@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-16  
-**Next item number:** 24
+**Next item number:** 27
 
 ## Rules
 
@@ -46,6 +46,9 @@
 21. Schedule a meeting with Frank and Darren to align on Ps and INC metrics
 22. Create a list of initiatives for SKRULL and ADIA for CAPEX work
 23. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
+24. Align on MTTR, MTTM and MTTD components with Tech Ops
+25. Work on a solution to include timestamps in fields that are currently date-only
+26. Work on a new prioritization matrix based on Impact and Urgency
 
 ---
 
@@ -53,4 +56,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6  
 **In progress:** 7, 8, 9, 10  
-**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26
