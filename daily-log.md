@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-16  
-**Next item number:** 27
+**Next item number:** 30
 
 ## Rules
 
@@ -49,6 +49,9 @@
 24. Align on MTTR, MTTM and MTTD components with Tech Ops
 25. Work on a solution to include timestamps in fields that are currently date-only
 26. Work on a new prioritization matrix based on Impact and Urgency
+27. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
+28. Investigate the MSTR Lambda CI/CD options with Infra team
+29. Move DBX Incident Dashboard to shared space (out of personal folders)
 
 ---
 
@@ -56,4 +59,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6  
 **In progress:** 7, 8, 9, 10  
-**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26
+**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
