@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-16  
-**Next item number:** 23
+**Next item number:** 24
 
 ## Rules
 
@@ -45,6 +45,7 @@
 20. Contact Ritika to fix [DATAINF board](https://deept.atlassian.net/jira/software/projects/DATAINF/apps/94d5de1a-112d-4549-bd03-5f910d5fd27b/880424a7-af14-4c77-b446-5ef9feee797a/structure/board/4256) and add ADIA project
 21. Schedule a meeting with Frank and Darren to align on Ps and INC metrics
 22. Create a list of initiatives for SKRULL and ADIA for CAPEX work
+23. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
 
 ---
 
@@ -52,4 +53,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6  
 **In progress:** 7, 8, 9, 10  
-**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22
+**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
