@@ -65,9 +65,55 @@ Use these exact strings in JQL assignee search when resolving email:
 
 | Type | When to use |
 |------|-------------|
-| **Story** | **Always** — the only issue type this skill creates |
+| **Story** | Default — routine ticket creation |
 | Task | **Never** — if the user says "task," still create a **Story** and say so in the confirmation |
-| Epic | **Not supported** by this skill (create epics via separate user request / Jira flow) |
+| **Epic** | When the user **explicitly** requests epic creation — see [SKILL.md](SKILL.md#version-defaults-epic-creation-only) |
+
+## Fix & Affects versions (**Epic create only**)
+
+Do **not** set these on **Story** creates unless the user explicitly asks.
+
+| Friendly name | Jira field | Role | Epic default |
+|---------------|------------|------|----------------|
+| Fix versions | `fixVersions` | Target release train | **SKRULL.2027** |
+| Affects versions | `versions` | Quarter / planning bucket | **Current `SKRULL.2027.Q*`** |
+
+Refresh IDs with `jira_get_project_versions` → `project_key: "SKRULL"` if an update fails.
+
+### Fix version IDs (as of 2026)
+
+| Name | Version id |
+|------|------------|
+| SKRULL.2027 | `106017` |
+
+### SKRULL.2027 fiscal quarters (Affects default)
+
+Use **creation date** to pick the Affects version name (aligned with Jira `startDate` / `releaseDate`):
+
+| Affects version | Version id | Start | Release (end) |
+|-----------------|------------|-------|----------------|
+| SKRULL.2027.Q1 | `106018` | 2026-09-30 | 2026-12-31 |
+| SKRULL.2027.Q2 | `106551` | 2027-01-01 | 2027-03-31 |
+| SKRULL.2027.Q3 | `106553` | 2027-04-01 | 2027-06-30 |
+| SKRULL.2027.Q4 | `106552` | 2027-07-01 | 2027-09-30 |
+
+**Calendar shortcut** (matches `scripts/skrull_version_defaults.py`):
+
+| Calendar months | Affects version |
+|-----------------|-----------------|
+| Oct–Dec | `SKRULL.(Y+1).Q1` |
+| Jan–Mar | `SKRULL.Y.Q2` |
+| Apr–Jun | `SKRULL.Y.Q3` |
+| Jul–Sep | `SKRULL.Y.Q4` |
+
+**Examples**
+
+- 2026-11-18 → **SKRULL.2027.Q1** (`106018`)
+- 2027-02-15 → **SKRULL.2027.Q2** (`106551`)
+
+**Empty Affects:** `jira_update_issue` → `"versions": []`
+
+**Empty Fix:** `jira_update_issue` → `"fixVersions": []` (only when user explicitly requests no Fix version)
 
 ## Custom fields
 

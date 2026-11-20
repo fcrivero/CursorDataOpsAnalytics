@@ -8,7 +8,7 @@
 | Ad Platform Data Ops Service High Urgency | `P7OFL7L` | High |
 | Ad Platform Data Ops Service Low Urgency | `P3CUKVY` | Low |
 
-Default query includes **both** unless the user filters urgency.
+**Default `list_incidents` scope:** High only (`P7OFL7L`). Add `P3CUKVY` only when the user explicitly asks for Low urgency or both services — see [SKILL.md](SKILL.md).
 
 ## Time window parsing
 

@@ -114,11 +114,26 @@ def issue_lifecycle(issue: dict) -> dict:
     return compute_metrics(issue)
 
 
-def resolved_sort_date(issue: dict) -> datetime | None:
+def cohort_resolution_datetime(issue: dict) -> datetime | None:
+    """Report cohort + weekly charts — same axis as JQL ``resolutiondate`` filter."""
+    rd = issue.get("resolutiondate")
+    if not rd:
+        return None
+    d = parse_jira_date(str(rd)[:10])
+    if d:
+        return datetime.combine(d, datetime.min.time(), tzinfo=timezone.utc)
+    return parse_dt(rd)
+
+
+def card_end_date_label(issue: dict) -> str:
+    """Card subtitle: operational End Date (Dates tab); fallback resolution date only if End Date empty."""
     end = parse_jira_date(issue.get("end_date"))
     if end:
-        return datetime.combine(end, datetime.min.time(), tzinfo=timezone.utc)
-    return parse_dt(issue.get("updated"))
+        return end.strftime("%b %d").lstrip("0").replace(" 0", " ")
+    cohort = cohort_resolution_datetime(issue)
+    if cohort:
+        return cohort.strftime("%b %d").lstrip("0").replace(" 0", " ")
+    return "—"
 
 
 def first_line(text: str, label: str) -> str | None:
@@ -255,7 +270,7 @@ def _metric_spans(lc: dict, cfg: ReportConfig) -> str:
     return f'<div class="text-[11px] text-neutral-500 mt-1 flex flex-wrap gap-x-3 gap-y-1">{" · ".join(parts)}</div>'
 
 
-def render_card(issue: dict, meta: dict, end: datetime, lc: dict, cfg: ReportConfig) -> str:
+def render_card(issue: dict, meta: dict, lc: dict, cfg: ReportConfig) -> str:
     key = issue["key"]
     pri = issue.get("priority") or "P3"
     border = PRI_COLOR.get(pri, "#d1d5db")
@@ -263,7 +278,7 @@ def render_card(issue: dict, meta: dict, end: datetime, lc: dict, cfg: ReportCon
     cat = meta.get("ISSUE_CATEGORY") or "Unspecified"
     ext = (meta.get("EXTERNAL") or "N").upper() == "Y"
     missed = (meta.get("MISSED_SLA") or "N").upper() == "Y"
-    resolved = end.strftime("%b %d").lstrip("0").replace(" 0", " ") if end else "—"
+    resolved = card_end_date_label(issue)
     badges = ""
     if ext:
         badges += '<span class="text-[9px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded border border-orange-300 text-orange-700 bg-orange-50">External</span> '
@@ -353,8 +368,8 @@ def build(issues: list[dict], open_issues: list[dict], cfg: ReportConfig) -> str
     for iss in issues:
         meta = parse_desc(iss.get("description") or "")
         lc = issue_lifecycle(iss)
-        end = resolved_sort_date(iss) or parse_dt(iss.get("updated"))
-        parsed.append((iss, meta, end, lc))
+        cohort_dt = cohort_resolution_datetime(iss)
+        parsed.append((iss, meta, cohort_dt, lc))
 
     parsed.sort(key=lambda x: x[2] or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
     n = len(parsed)
@@ -389,10 +404,10 @@ def build(issues: list[dict], open_issues: list[dict], cfg: ReportConfig) -> str
     weeks_order = month_week_labels(cfg.year, cfg.month)
     week_pri = {w: defaultdict(int) for w in weeks_order}
     week_cat = {w: defaultdict(int) for w in weeks_order}
-    for iss, meta, end, _lc in parsed:
-        if not end:
+    for iss, meta, cohort_dt, _lc in parsed:
+        if not cohort_dt:
             continue
-        w = week_bucket(end, cfg)
+        w = week_bucket(cohort_dt, cfg)
         if not w or w not in week_pri:
             continue
         pri = iss.get("priority") or "P3"
@@ -429,13 +444,14 @@ def build(issues: list[dict], open_issues: list[dict], cfg: ReportConfig) -> str
     sources = sorted({p[1].get("SOURCE_SYSTEM", "Unspecified") for p in parsed})
     categories = sorted({p[1].get("ISSUE_CATEGORY", "Unspecified") for p in parsed})
 
-    cards = "\n".join(render_card(i, m, e, lc, cfg) for i, m, e, lc in parsed)
+    cards = "\n".join(render_card(i, m, lc, cfg) for i, m, _cohort, lc in parsed)
 
     open_n = len(open_issues)
     open_detail = ""
     if open_issues:
         o = open_issues[0]
-        open_detail = f"{o.get('priority', '')} · {o['key']}"
+        sample = f"{o.get('priority', '')} · {o['key']}".strip(" ·")
+        open_detail = f"Most recently updated · {sample}" if open_n > 1 else sample
 
     pri_sub = " · ".join(f"{pri_counts[p]} {p}" for p in ("P1", "P2", "P3", "P4") if pri_counts[p])
 
@@ -538,6 +554,7 @@ def build(issues: list[dict], open_issues: list[dict], cfg: ReportConfig) -> str
       <h2 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wide mb-3 pb-2 border-b border-neutral-300">
         <i data-lucide="bar-chart-3" class="h-4 w-4"></i> Resolved Incidents by Week — {cfg.month_label}
       </h2>
+      <p class="text-[11px] text-neutral-500 mb-3">Weekly counts use <strong>Jira resolution date</strong> (same cohort as the report JQL). MTTR still uses Start DatePick → End Date on each card.</p>
       <div class="flex items-center gap-1 mb-4 no-print">
         <button class="subtab-btn px-4 py-1.5 text-xs font-semibold rounded-md border border-black bg-black text-white" data-subtab="priority">By Priority</button>
         <button class="subtab-btn px-4 py-1.5 text-xs font-semibold rounded-md border border-neutral-300 text-neutral-700 hover:border-black" data-subtab="category">By Issue Category</button>

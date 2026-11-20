@@ -1,17 +1,21 @@
 ---
 name: dataops-pd-incidents
 description: >-
-  Lists PagerDuty incidents for Ad Platform Data Ops Service (High and Low
-  Urgency) in a time window and renders a table with urgency, PD link, assignee,
-  DBX workspace/job/run links (via ads-databricks MCP), team, and MS Teams
-  on-call tags. Use when the user asks for Data Ops PD incidents, Ad Platform
-  Data Ops incident report, high/low urgency Data Ops pages, or a PagerDuty +
-  Databricks incident table for a given window.
+  Lists PagerDuty incidents for Ad Platform Data Ops Service in a time window
+  and renders a table with urgency, PD link, assignee, DBX workspace/job/run links
+  (via ads-databricks MCP), team, and MS Teams on-call tags. **Default scope is
+  High Urgency only** (`P7OFL7L`); include Low (`P3CUKVY`) only when the user
+  explicitly asks for Low urgency, both services, or all urgencies. Use when the
+  user asks for Data Ops PD incidents, Ad Platform Data Ops incident report,
+  high/low urgency Data Ops pages, or a PagerDuty + Databricks incident table for
+  a given window.
 ---
 
-# Data Ops PagerDuty Incidents (High + Low Urgency)
+# Data Ops PagerDuty Incidents (High + optional Low Urgency)
 
-Produce a markdown table of **Ad Platform Data Ops** incidents (High and Low Urgency) for a user-specified time window, enriched with Databricks workspace and job/run links.
+Produce a markdown table of **Ad Platform Data Ops** incidents for a user-specified time window, enriched with Databricks workspace and job/run links.
+
+**Default PagerDuty scope:** **High Urgency only** (`P7OFL7L`). Omit Low (`P3CUKVY`) unless the user explicitly asks for Low urgency, both urgencies, all services, or names a specific Low-urgency incident/PD# to include. Aligns with [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md) (Default scope table).
 
 ## Prerequisites
 
@@ -42,7 +46,7 @@ Parse from the user message (ask if ambiguous):
 | **Window start** | "today from 9:30 AM", "since 2026-07-20 09:30" | Start of today 00:00 PT |
 | **Window end** | "until now", "through 5 PM" | Now |
 | **Relative window** | "last 24 hours", "last 8 hours" | — |
-| **Urgency filter** | "high urgency only", "low urgency only" | Both High and Low |
+| **Urgency filter** | "high urgency only", "low urgency only", "both / all urgencies" | **High only** (`P7OFL7L`) — not both |
 
 Convert the window to ISO-8601 UTC for PagerDuty `since` / `until`.
 
@@ -52,13 +56,13 @@ Display timestamps in the table in **PT** unless the user requests another timez
 
 ### Step 1 — Fetch incidents
 
-Query **both** Data Ops services in one call unless the user filtered urgency:
+Use **`list_incidents`** with `service_ids` from the table below (default **not** both services).
 
 ```json
 CallMcpTool user-pagerduty-mcp-manual list_incidents
 {
   "query_model": {
-    "service_ids": ["P7OFL7L", "P3CUKVY"],
+    "service_ids": ["P7OFL7L"],
     "since": "<start_utc_iso>",
     "until": "<end_utc_iso>",
     "request_scope": "all",
@@ -72,9 +76,10 @@ Urgency filter overrides:
 
 | User request | `service_ids` |
 |--------------|-----------------|
+| **Default** (no urgency named, generic “list incidents”) | `["P7OFL7L"]` |
 | High only | `["P7OFL7L"]` |
 | Low only | `["P3CUKVY"]` |
-| Default (both) | `["P7OFL7L", "P3CUKVY"]` |
+| Both / all urgencies / "high and low" / include P3CUKVY | `["P7OFL7L", "P3CUKVY"]` |
 
 Set **Urgency** column from `incident.service.id`:
 
@@ -141,7 +146,7 @@ Use this column order exactly:
 After the table, add a short summary:
 
 - Total incidents, open vs resolved counts
-- Count by Urgency (High / Low)
+- Count by Urgency — **if scope is High only:** High counts only (omit Low column from summary or state `Low: 0 — out of scope`); **if both services:** High and Low
 - Count by Team (ODS / ADM / BI / TBD)
 - Count by Workspace (sox-prod-uw2 / gen-prod-uw2 / N/A)
 - Note if ads-databricks enrichment was partial or skipped
@@ -149,10 +154,10 @@ After the table, add a short summary:
 ## Output template
 
 ```markdown
-## Data Ops Incidents (High + Low Urgency)
+## Data Ops Incidents ({scope_label})
 
 **Window:** {start_pt} → {end_pt} (PT)
-**Services:** Ad Platform Data Ops Service High Urgency, Ad Platform Data Ops Service Low Urgency
+**Services:** {service_line}
 
 | PD# | Urgency | Status | Assignee | Timestamp | Title | Job | Workspace | DBX Job/Run link | Team | Oncall MS Teams Tag |
 |-----|---------|--------|----------|-----------|-------|-----|-----------|------------------|------|---------------------|
@@ -160,7 +165,7 @@ After the table, add a short summary:
 
 ### Summary
 - **Total:** N ({open} open, {resolved} resolved)
-- **By urgency:** High: n, Low: n
+- **By urgency:** {high_low_line}
 - **By team:** ODS: n, ADM: n, BI: n, TBD: n
 - **By workspace:** sox-prod-uw2: n, gen-prod-uw2: n, N/A: n
 ```
@@ -171,7 +176,7 @@ Sort rows by Timestamp ascending unless the user asks for newest first.
 
 **User:** "List Data Ops PD incidents today from 9:30 AM"
 
-→ Window: today 09:30 PT → now. Both urgencies. Full table.
+→ Window: today 09:30 PT → now. **High urgency only** (`P7OFL7L`). Full table; `scope_label` = High Urgency only.
 
 **User:** "High urgency Data Ops PD incidents last 24 hours"
 
@@ -179,7 +184,11 @@ Sort rows by Timestamp ascending unless the user asks for newest first.
 
 **User:** "PD incidents for Ad Platform Data Ops last 24 hours"
 
-→ Window: now − 24h → now. Both urgencies. Same table format.
+→ Window: now − 24h → now. **High urgency only** unless they said “all urgencies”. Same table format.
+
+**User:** "List high and low Data Ops incidents today"
+
+→ `service_ids`: `["P7OFL7L", "P3CUKVY"]`. Header and summary include both urgencies.
 
 ## Do not
 

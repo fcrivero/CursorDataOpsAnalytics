@@ -1,0 +1,25 @@
+schema_version: 1
+skill: hoop
+reviewed: false
+should_trigger:
+  - What's the HOOP for external API resilience?
+  - Explain HOOP-0188 and link the full record.
+  - Which HOOPs cover load shedding?
+  - How many HOOPs do we have, and how many are converted/enforceable?
+  - Is there a HOOP about artifact caching proxies?
+  - Show me the converted HOOPs.
+  - What does HOOP-1319 say?
+  - Find HOOPs about playback.
+  - Does HOOP-0222 have a vetted module I can apply?
+  - List the HOOP library coverage.
+should_not_trigger:
+  - What's our engineering standard for external API resilience?
+  - Explain STAND-0118 and link the full text.
+  - Create a Jira ticket for the login bug we found yesterday.
+  - What's the CI status of pull request 10728?
+  - Run the unit tests for this Go package.
+  - Deploy the payments service to staging.
+  - Draft a brand-new HOOP for structured logging.
+  - Look up the yellowpages record for the ads service.
+  - Summarize the changes in this pull request.
+  - Fix the failing lint check on my branch.

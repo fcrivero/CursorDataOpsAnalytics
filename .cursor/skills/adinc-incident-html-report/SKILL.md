@@ -20,9 +20,9 @@ Read [adinc-jira-dates.md](../adinc-jira-dates.md) before changing metrics.
 
 | Metric | Interval (date-only, later − earlier) |
 |--------|----------------------------------------|
-| **MTTR** | Start DatePick (`customfield_10489`) → End Date (`customfield_10453`) |
+| **MTTR** | Start DatePick (`customfield_10489`) → **End Date** (`customfield_10453`) only — **not** `resolutiondate` |
 | **MTTM** | Start DatePick → Completion Date (`customfield_10566`) |
-| **MTTD** | Defect introduction (Confluence RCA §5) → Start DatePick |
+| **MTTD** | Defect introduction (Confluence RCA §5) → Start DatePick (Notes ADF **inlineCard** / **blockCard** URLs + Confluence REST; warnings on stderr if fetch/parse fails) |
 
 **Never** use Jira Created → Updated for MTTR.
 
@@ -33,10 +33,11 @@ Read [adinc-jira-dates.md](../adinc-jira-dates.md) before changing metrics.
 
 | Input | Default | Notes |
 |-------|---------|--------|
-| **Timeframe** | Previous **full calendar month** (1st–last day, by `resolutiondate`) | `--month YYYY-MM` or `--start` / `--end` |
+| **Timeframe** | Previous **full calendar month** (cohort JQL + **weekly charts** use `resolutiondate`; **MTTR math** uses End Date per [adinc-jira-dates.md](../adinc-jira-dates.md)) | `--month YYYY-MM` or `--start` / `--end` |
 | **Extra JQL** | none | e.g. `--jql-extra 'created >= "2026-10-06"'` to match Ads Incident Dashboard cohort |
 | **Metrics** | `mttr,mttm,mttd` | `--metrics mttr` or `--exclude mttd` |
 | **Output** | `~/Downloads/AdData-Metrics_AdsData_{MonthYear}.html` | `-o path` |
+| **Still Open KPI** | All live ADINC (`status != Done`), Jira-paginated | Omit with `--no-open-count`; tile shows **full count**, subtitle is latest-updated ticket only |
 
 Parse natural language into CLI flags (e.g. “October 2026, no MTTD” → `--month 2026-10 --exclude mttd`).
 
@@ -73,15 +74,22 @@ python generate_adinc_incident_report.py --month 2026-10 --json-snapshot ./adinc
 
 ### Credentials
 
-Script loads **JIRA_USERNAME** + **JIRA_TOKEN** (or **CONFLUENCE_USERNAME** + **CONFLUENCE_TOKEN**) from:
+**Jira** uses the same pattern as `jira-adinc-audit` / **Jira MCP** (`JIRA_SERVER` + `JIRA_TOKEN`, Bearer or email+token Basic). Loaded from:
 
-1. `scripts/.env`
+1. `scripts/.env` (see [scripts/.env.example](scripts/.env.example))
 2. Skill `.env`
-3. `ADINC_JIRA_ENV` path
-4. `jira-adinc-audit/scripts/.env`
-5. Confluence MCP `.env` (common on this machine)
+3. `jira-adinc-audit/scripts/.env`
+4. **`ADINC_JIRA_ENV`** (User env) — path to `jira-mcp-server-main/.env` (same file as Jira MCP Docker)
 
-Do not commit tokens.
+**Confluence** (MTTD / RCA §5 only) uses **`CONFLUENCE_SERVER`** + **`CONFLUENCE_TOKEN`** like Confluence MCP, from:
+
+1. `scripts/.env` / skill `.env`
+2. **`ADINC_CONFLUENCE_ENV`** (User env) — `confluence-mcp-server-main/.env`
+3. **`ADINC_JIRA_ENV`** — only for shared account email when building Basic auth (token stays Confluence’s)
+
+Use `--exclude mttd` to skip Confluence REST entirely.
+
+Do not commit tokens or hardcode machine paths in the repo.
 
 ## Fallback when REST auth fails
 

@@ -1,18 +1,25 @@
 ---
 name: dataops-pd-long-run
 description: >-
-  Triage and monitor PagerDuty Data Ops Long Run incidents: same input as
-  dataops-pd-incident-analysis (PD#, URL, job, DAG). Immediately checks whether
+  Triage and monitor PagerDuty Data Ops Long Run incidents: invoked when user sends
+  only a PD# / job name and Step 0 classifies Long Run, or when user says monitor/recheck long run.
+  Routed from dataops-pd-incident-analysis Step 0 when alert type is Long Run.
+  Same input as incident analysis (PD#, URL, job, DAG). Immediately checks whether
   the DBX/Airflow run finished; if run state cannot be verified (e.g. LDB Airflow
   without Airflow MCP), tell the user immediately—no auto-recheck on proxy metrics.
   If SUCCESS prompts to resolve; if RUNNING diagnoses blocker and suggests monitor
   vs escalate with timed recheck (DBX only). Can resolve PD with notes when user
   confirms. Use when the user says monitor long run, check if finished, close long
   run, recheck PD#, or triage [Long Run] alerts. For full RCA, past incidents, and
-  ADINC use dataops-pd-incident-analysis instead.
+  ADINC use dataops-pd-incident-analysis instead (or user override on Long Run PD).
 ---
 
 # Data Ops PD Long Run Triage
+
+**Entry paths**
+
+1. **Router (default for “analyze PD …”)** — [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md) **Step 0** classifies `[Long Run]` → read and execute **this** skill.
+2. **Direct** — user says `long run`, `monitor long run`, `recheck PD#`, etc.
 
 Fast **Long Run** workflow: check run status first, then **resolve**, **monitor**, or **escalate**. Unlike [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md), this skill **may resolve** PagerDuty when the user confirms.
 
@@ -24,7 +31,8 @@ Shared config (input, tags, DBX, patterns): [reference.md](reference.md)
 
 1. **PagerDuty MCP** (`user-pagerduty-mcp-manual`)
 2. **ads-databricks MCP** — required for DBX Long Runs; skip DBX for LDB/Airflow-only if no job in title
-3. Always call `GetMcpTools` before `CallMcpTool`
+3. **Datadog MCP** (`plugin-datadog-datadog`) — optional but recommended: run **Step 3** (CPU/memory) from [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md) when run is **RUNNING** or duration is unexplained; show resource verdict before DBX/run-state tables when user asked for full analysis
+4. Always call `GetDynamicTools` before `CallDynamicTool`
 
 ## Input — same as dataops-pd-incident-analysis
 
@@ -38,7 +46,7 @@ Shared config (input, tags, DBX, patterns): [reference.md](reference.md)
 
 If ambiguous, ask once. **Never** substitute a different PD# from chat context.
 
-Confirm the incident title contains **`[Long Run]`** (case-insensitive). If the user gave a **Fail** PD#, say so and offer `dataops-pd-incident-analysis` instead.
+Confirm the incident title contains **`[Long Run]`** (case-insensitive) **or** Step 0 already routed here. If the user invoked **this skill directly** on a **Fail** PD# (title has `[Fail]` / `DataOps|PROD|Fail|`), say so and offer [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md) instead. If they came from Step 0, identity + title were already validated — do not re-ask.
 
 ## Workflow overview
 
@@ -386,6 +394,8 @@ For RUNNING, also classify **pattern** — [reference.md](reference.md#long-run-
 | **Sensor wait** | `*_sensor` / `WAITING_FOR_RETRY`; error `Not ready to process` |
 | **Zombie span** | Parent elapsed ≫ baseline; long gap between task attempts; Datadog span ≫ active work |
 | **Stuck** | No task `RUNNING`, no retry scheduled, elapsed > 2× baseline |
+
+**Resource check (Branch C / unexplained slowness):** Run [incident-analysis Step 3](../dataops-pd-incident-analysis/SKILL.md#step-3--datadog-resource-analysis-cpu--memory) (Datadog CPU/memory). If **resource_likely**, mention in triage **Assessment** and escalation text (cluster resize, memory bump, noisy neighbor). If **resource_unlikely**, prefer sensor/zombie/stuck pattern above.
 
 ---
 

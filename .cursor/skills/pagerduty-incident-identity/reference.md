@@ -137,6 +137,5 @@ When listing many incidents, each row is already self-consistent (`id` + `incide
 - [dataops-pd-long-run](../dataops-pd-long-run/SKILL.md)
 - [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md)
 - [dataops-pd-incidents](../dataops-pd-incidents/SKILL.md)
-- [dataops-shift-summary](../dataops-shift-summary/SKILL.md)
 - [oncall-handoff-incidents](../oncall-handoff-incidents/SKILL.md)
 - [confluence-adinc-history](../confluence-adinc-history/SKILL.md) (when `PD_ID` present)

@@ -10,7 +10,12 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from adinc_confluence import enrich_mttd
-from adinc_credentials import basic_auth, load_credentials
+from adinc_credentials import (
+    confluence_auth_header,
+    jira_auth_header,
+    load_confluence_env,
+    load_jira_env,
+)
 from adinc_fetch import jira_search
 from html_report import ALL_METRICS, ReportConfig, build
 
@@ -130,8 +135,9 @@ def main() -> int:
     cfg = ReportConfig(month_label=label, jql=jql, year=year, month=month, metrics=metrics)
     out_path = args.output or default_output(year, month)
 
+    load_jira_env()
     try:
-        user, token = load_credentials()
+        jira_auth_header()
     except RuntimeError as exc:
         print(exc, file=sys.stderr)
         print(
@@ -141,34 +147,49 @@ def main() -> int:
         )
         return 1
 
-    auth = basic_auth(user, token)
+    confluence_auth: str | None = None
+    if metrics & {"mttd"}:
+        load_confluence_env()
+        try:
+            confluence_auth = confluence_auth_header()
+        except RuntimeError as exc:
+            print(f"Warning: {exc}", file=sys.stderr)
+            print("  MTTD will skip Confluence RCA fetch; use --exclude mttd to silence.", file=sys.stderr)
+
     print(f"Fetching resolved ADINC: {jql}", flush=True)
-    resolved = jira_search(jql, auth)
+    resolved = jira_search(jql)
     print(f"  {len(resolved)} resolved", flush=True)
 
-    if metrics & {"mttd"}:
+    if metrics & {"mttd"} and confluence_auth:
         print("Enriching MTTD from Confluence RCA pages …", flush=True)
-        resolved = [enrich_mttd(i, auth) for i in resolved]
+        resolved = [enrich_mttd(i, confluence_auth) for i in resolved]
+    elif metrics & {"mttd"}:
+        resolved = [enrich_mttd(i, None) for i in resolved]
 
     open_issues: list[dict] = []
     if not args.no_open_count:
         open_jql = 'project = ADINC AND status != Done ORDER BY updated DESC'
-        open_issues = jira_search(open_jql, auth, max_results=50)
+        print(f"Fetching still-open ADINC (all pages): {open_jql}", flush=True)
+        open_issues = jira_search(open_jql)
         print(f"  {len(open_issues)} open (for KPI)", flush=True)
 
     payload = {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "source": "adinc-incident-html-report skill (Jira REST + Confluence)",
         "jql_resolved": jql,
+        "jql_open": 'project = ADINC AND status != Done ORDER BY updated DESC'
+        if not args.no_open_count
+        else None,
         "metrics": sorted(metrics),
         "resolved": resolved,
-        "open": open_issues[:5],
+        "open_total": len(open_issues),
+        "open": open_issues,
     }
     if args.json_snapshot:
         args.json_snapshot.write_text(json.dumps(payload, indent=2), encoding="utf-8")
         print(f"Wrote snapshot {args.json_snapshot}")
 
-    html_out = build(resolved, open_issues[:5], cfg)
+    html_out = build(resolved, open_issues, cfg)
     out_path.write_text(html_out, encoding="utf-8")
     print(f"Wrote {out_path} ({len(resolved)} incidents, {len(html_out)} bytes)")
     return 0

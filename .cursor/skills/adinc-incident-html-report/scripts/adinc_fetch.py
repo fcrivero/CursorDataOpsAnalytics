@@ -6,13 +6,14 @@ from urllib.error import HTTPError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
-from adinc_credentials import JIRA_BASE, basic_auth
+from adinc_credentials import jira_auth_header, jira_base
 from adinc_lifecycle_metrics import (
     COMPLETION_DATE,
     END_DATE,
     START_DATE_PICK,
     compute_metrics,
     metrics_from_jira_fields,
+    resolve_confluence_page_id,
 )
 
 NOTES_FIELD = "customfield_10253"
@@ -56,6 +57,12 @@ def adf_to_text(node) -> str:
         return "\n"
     if kind == "paragraph":
         return adf_to_text(node.get("content")) + "\n"
+    if kind in ("inlineCard", "blockCard", "embedCard"):
+        url = attrs.get("url") or attrs.get("href") or ""
+        inner = adf_to_text(node.get("content"))
+        if url:
+            return f"{inner} {url}".strip() if inner else str(url)
+        return inner
     return adf_to_text(node.get("content"))
 
 
@@ -78,6 +85,8 @@ def normalize_issue(raw: dict) -> dict:
     else:
         priority = str(priority_field or "")
 
+    notes_raw = f.get(NOTES_FIELD)
+    notes_text = field_to_text(notes_raw)
     issue = {
         "key": raw.get("key", ""),
         "summary": f.get("summary") or "",
@@ -86,7 +95,8 @@ def normalize_issue(raw: dict) -> dict:
         "created": f.get("created") or "",
         "updated": f.get("updated") or "",
         "description": field_to_text(f.get("description")),
-        "notes": field_to_text(f.get(NOTES_FIELD)),
+        "notes": notes_text,
+        "confluence_page_id": resolve_confluence_page_id(notes_raw, notes_text),
         "resolutiondate": f.get("resolutiondate") or "",
     }
     issue.update(metrics_from_jira_fields(f))
@@ -94,7 +104,7 @@ def normalize_issue(raw: dict) -> dict:
     return issue
 
 
-def jira_search(jql: str, auth_header: str, *, max_results: int = 100) -> list[dict]:
+def jira_search(jql: str, *, max_results: int = 100) -> list[dict]:
     issues: list[dict] = []
     page_token: str | None = None
     field_list = ",".join(SEARCH_FIELDS)
@@ -106,10 +116,10 @@ def jira_search(jql: str, auth_header: str, *, max_results: int = 100) -> list[d
         ]
         if page_token:
             params.append(f"nextPageToken={quote(page_token)}")
-        url = f"{JIRA_BASE}/rest/api/3/search/jql?{'&'.join(params)}"
+        url = f"{jira_base()}/rest/api/3/search/jql?{'&'.join(params)}"
         req = Request(
             url,
-            headers={"Authorization": f"Basic {auth_header}", "Accept": "application/json"},
+            headers={"Authorization": jira_auth_header(), "Accept": "application/json"},
             method="GET",
         )
         try:

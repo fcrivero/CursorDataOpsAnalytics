@@ -17,7 +17,6 @@ This skill has no separate workflow — it is a **safety contract** linked from:
 - `dataops-pd-long-run`
 - `dataops-pd-incident-analysis`
 - `dataops-pd-incidents`
-- `dataops-shift-summary`
 - `oncall-handoff-incidents`
 - `confluence-adinc-history`
 

@@ -2,15 +2,18 @@
 name: dataops-shift-summary
 description: >-
   Generates a concise executive Data Ops shift summary for a date or date range
-  by cross-checking PagerDuty incidents (Ad Platform Data Ops High/Low Urgency)
-  with agent transcripts and optional Jira ADINC tickets. Use when the user asks
-  for an oncall executive summary, shift summary for their boss, Data Ops daily
-  recap, or end-of-shift report for a given day or time window.
+  by cross-checking PagerDuty incidents (default: Ad Platform Data Ops High
+  Urgency only — include Low only when the user explicitly asks) with agent
+  transcripts and optional Jira ADINC tickets. Use when the user asks for an
+  oncall executive summary, shift summary for their boss, Data Ops daily recap,
+  or end-of-shift report for a given day or time window.
 ---
 
 # Data Ops Shift Summary (Executive)
 
 Produce a **short, boss-ready** bullet summary of an oncall shift — similar to a Microsoft Teams channel post, not a full incident table.
+
+**Default PagerDuty scope:** **High Urgency only** (`P7OFL7L`). Add **`P3CUKVY`** to `service_ids` only when the user explicitly asks for Low urgency, both services, or all urgencies. Same rules as [dataops-pd-incident-analysis](../dataops-pd-incident-analysis/SKILL.md).
 
 ## Prerequisites
 
@@ -41,7 +44,7 @@ Parse from the user message (ask if ambiguous):
 | **Single day** | "Jul 22", "yesterday", "today" | Today 00:00 → now PT |
 | **Shift window** | "Jul 22 9:30 AM–3:30 PM PT" | Full day if no times given |
 | **Date range** | "Jul 20–22", "last 3 days" | Start/end dates inclusive |
-| **Urgency filter** | "high urgency only" | Both High and Low |
+| **Urgency filter** | "high urgency only", "low only", "both / all urgencies" | **High only** (`P7OFL7L`) |
 
 Convert window to ISO-8601 UTC for PagerDuty `since` / `until`. Display the header in **PT**.
 
@@ -73,7 +76,7 @@ For **date ranges**, query the full span in one PD call; group output **per day*
 CallMcpTool user-pagerduty-mcp-manual list_incidents
 {
   "query_model": {
-    "service_ids": ["P7OFL7L", "P3CUKVY"],
+    "service_ids": ["P7OFL7L"],
     "since": "<start_utc_iso>",
     "until": "<end_utc_iso>",
     "request_scope": "all",
@@ -83,7 +86,9 @@ CallMcpTool user-pagerduty-mcp-manual list_incidents
 }
 ```
 
-Urgency filter: High only → `["P7OFL7L"]`; Low only → `["P3CUKVY"]`.
+Urgency filter: **default** → `["P7OFL7L"]`; High only → `["P7OFL7L"]`; Low only → `["P3CUKVY"]`; both / all urgencies / user explicitly includes Low → `["P7OFL7L", "P3CUKVY"]`.
+
+When the summary is **High-only**, state in one line that Low-urgency incidents were omitted unless the user asked otherwise (optional: "N open on Low service — ask to include").
 
 Paginate if >1000 by advancing `since` to the last incident's `created_at`.
 
@@ -219,7 +224,7 @@ See [examples.md](examples.md).
 - Fabricate incidents, counts, root causes, ADINC tickets, or customer impact.
 - Include resolved incidents in "still open" unless re-opened inside the window.
 - Dump the full `dataops-pd-incidents` table in the default executive output.
-- Search PagerDuty by service name — always use `P7OFL7L` / `P3CUKVY`.
+- Search PagerDuty by service name — always use service IDs; **default** query uses `P7OFL7L` only; add `P3CUKVY` only when scope includes Low.
 - Attach transcript context to the wrong PD# — follow [pagerduty-incident-identity](../pagerduty-incident-identity/reference.md).
 - Expose PagerDuty API tokens or MCP auth headers.
 - Reassign incidents or change PD state — this skill is read-only.

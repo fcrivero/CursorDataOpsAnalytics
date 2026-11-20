@@ -1,40 +1,43 @@
-# Cursor skills — Fernando Rivero (author backup)
+# Cursor skills — DataOps & personal (author backup)
 
-Complete backup of **author-maintained** skills from `~/.cursor/skills` (excludes AIX/AdPlatform bundles, `selection/*`, and third-party skills such as `jira-audit`, `ai-jira-estimate`).
+Skills for **Data Operations (SKRULL, ADINC, PagerDuty, pipeline docs, HTML dashboard)** and **personal productivity**. Synced from `~/.cursor/skills`.
 
-Install: copy or robocopy this folder into your Cursor skills path. Shared ADINC docs: [`adinc-jira-notes.md`](adinc-jira-notes.md), [`adinc-jira-dates.md`](adinc-jira-dates.md).
+**Analytics (ADIA) skills** live in [fcrivero/AnalyticsScripts](https://github.com/fcrivero/AnalyticsScripts) under `.cursor/skills/`.
 
-## Inventory (22 skills)
+Shared ADINC: [`adinc-jira-notes.md`](adinc-jira-notes.md), [`adinc-jira-dates.md`](adinc-jira-dates.md).
 
-| Skill | Team / process |
-| ----- | -------------- |
-| `adinc-incident-html-report` | DataOps — ADINC metrics HTML dashboard |
-| `confluence-adinc-history` | DataOps — ADINC → Confluence RCA |
-| `dataops-pd-incident-analysis` | DataOps — single PD incident analysis |
-| `dataops-pd-incidents` | DataOps — PD incident list |
-| `dataops-pd-long-run` | DataOps — Long Run PD triage |
-| `dataops-shift-summary` | DataOps — shift executive summary |
-| `jira-adinc-audit` | DataOps — ADINC ticket audit |
-| `jira-adinc-tickets` | DataOps — ADINC ticket create/update |
-| `jira-skrull-audit` | DataOps / SKRULL — board hygiene audit |
-| `jira-skrull-tickets` | DataOps / SKRULL — story/task creation |
-| `oncall-handoff-incidents` | DataOps — on-call handoff |
-| `pagerduty-incident-identity` | DataOps — PD incident safety rules |
-| `pipeline-docs-audit` | DataOps — Confluence pipeline doc standard |
-| `adia-status-report` | Analytics (ADIA) — status report |
-| `jira-adia-tickets` | Analytics (ADIA) — ticket creation |
-| `focus-plan` | Personal / work planning — weekly Confluence focus plan |
-| `jira-closure` | Cross-team — closure notes → Teams |
-| `meeting-action-items-report` | Cross-team — Cerebro action items by attendee |
-| `meeting-notes-ingest` | Cross-team — Teams transcript → daily log |
-| `mcp-health` | Tooling — MCP + AIX connectivity audit |
-| `rds-query` | Tooling — AWS RDS (Xwing/MSTR) read-only SQL |
-| `analytics-scripts-sync` | Git — mirror TWDC `AdPlatformV2/analytics` → `fcrivero/AnalyticsScripts` |
+## DataOps — PagerDuty & incidents
 
-## MCP / CLI (typical)
+| Skill | Purpose |
+| ----- | ------- |
+| `dataops-pd-incident-analysis` | Single PD incident analysis |
+| `dataops-pd-incidents` | PD incident list |
+| `dataops-pd-long-run` | Long Run triage |
+| `oncall-handoff-incidents` | On-call handoff |
+| `pagerduty-incident-identity` | PD identity safety |
+| `dataops-shift-summary` | Shift executive summary |
+| `dataops-status-report` | Foundations Data Ops weekly narrative |
 
-Per skill: `user-jira-server`, `user-pagerduty-mcp-manual`, `user-ads-databricks`, `user-confluence-disney`, `user-ads-cerebro-qa`, Teams/Outlook AIX CLIs, etc. See each `SKILL.md`.
+## DataOps — SKRULL, ADINC, dashboards
 
-## Excluded from this backup (not author-owned)
+| Skill | Purpose |
+| ----- | ------- |
+| `jira-skrull-audit` / `jira-skrull-tickets` | SKRULL hygiene & creation |
+| `jira-adinc-audit` / `jira-adinc-tickets` | ADINC audit & creation |
+| `confluence-adinc-history` | ADINC → Confluence RCA |
+| `adinc-incident-html-report` | ADINC metrics HTML dashboard |
+| `pipeline-docs-audit` | Pipeline Confluence standard |
 
-AIX CLIs (`teams-cli`, `dbx-cli`, …), AdPlatform templates (`adplatform-code-review`, `documentation`, …), `selection/*` workflow skills, John Jenkins / AIX skills (`jira-audit`, `audit-docs`, …).
+## Personal / cross-team
+
+| Skill | Purpose |
+| ----- | ------- |
+| `focus-plan` | Weekly Confluence focus plan |
+| `meeting-notes-ingest` | Teams transcripts → daily log |
+| `meeting-action-items-report` | Cerebro action items |
+| `jira-closure` | Closure notes → Teams |
+| `mcp-health` | MCP / AIX health |
+| `hoop` | HOOP lookup |
+| `pr-review-then-approve` | GitHub PR review then approve |
+
+**Excluded:** AIX bundle skills, team DataOps skills (`analyze-pd`, `pd-triage`, `runbook-lookup`), third-party skills (`jira-audit`, `ai-jira-estimate`).
