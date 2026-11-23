@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-23  
-**Next item number:** 34
+**Next item number:** 36
 
 ## Rules
 
@@ -56,6 +56,8 @@
 31. Schedule meeting with Arif to discuss MSTR container-based migration
 32. Schedule meeting with Riyaz and Praveen Alur to discuss MSTR container-based migration
 33. Clarify from MSTR vendor effort and timeline for container-based migration
+34. Provide feedback to Interview || Manjunath
+35. Provide feedback to Interview || Sai Naveen
 
 ---
 
@@ -63,4 +65,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19  
 **In progress:** 20, 21, 22  
-**Open:** 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33
+**Open:** 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35
