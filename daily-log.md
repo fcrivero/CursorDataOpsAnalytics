@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-23  
-**Next item number:** 36
+**Next item number:** 35
 
 ## Rules
 
@@ -47,17 +47,16 @@
 22. **In progress** Establish guidelines to approve DataOps Monitors in PRD
 23. Work on fleet engineering status report
 24. Coordinate with Deepthi Konda on the infrastructure request once the OAuth/Jira-admin prerequisites are ready
-25. Create a list of initiatives for SKRULL and ADIA for CAPEX work
-26. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
-27. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
-28. Investigate the MSTR Lambda CI/CD options with Infra team
-29. Move DBX Incident Dashboard to shared space (out of personal folders)
-30. Add SKRULL and ADIA TRPs into Foundation Engineering - Q2 Eng Led Items — [Google Sheets](https://docs.google.com/spreadsheets/d/1B0wQEhwUKwdfyIw-17h7L0sexx1vD9ld6YTW6ouNpJk/edit?gid=0#gid=0)
-31. Schedule meeting with Arif to discuss MSTR container-based migration
-32. Schedule meeting with Riyaz and Praveen Alur to discuss MSTR container-based migration
-33. Clarify from MSTR vendor effort and timeline for container-based migration
-34. Provide feedback to Interview || Manjunath
-35. Provide feedback to Interview || Sai Naveen
+25. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
+26. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
+27. Investigate the MSTR Lambda CI/CD options with Infra team
+28. Move DBX Incident Dashboard to shared space (out of personal folders)
+29. Add SKRULL and ADIA TRPs into Foundation Engineering - Q2 Eng Led Items — [Google Sheets](https://docs.google.com/spreadsheets/d/1B0wQEhwUKwdfyIw-17h7L0sexx1vD9ld6YTW6ouNpJk/edit?gid=0#gid=0)
+30. Schedule meeting with Arif to discuss MSTR container-based migration
+31. Schedule meeting with Riyaz and Praveen Alur to discuss MSTR container-based migration
+32. Clarify from MSTR vendor effort and timeline for container-based migration
+33. Provide feedback to Interview || Manjunath
+34. Provide feedback to Interview || Sai Naveen
 
 ---
 
@@ -65,4 +64,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19  
 **In progress:** 20, 21, 22  
-**Open:** 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+**Open:** 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
