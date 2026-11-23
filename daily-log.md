@@ -30,25 +30,25 @@
 5. ~~Provide feedback to Peter and Michelle~~
 6. ~~Review/update DataOps skills with Dmytro~~
 7. ~~Plan SKRULL roadmap~~
-8. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-9. **In progress** Schedule MSTR Oct ONE Update
-10. **In progress** Establish guidelines to approve DataOps Monitors in PRD
-11. **In progress** Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [ADINC & RCA agreements chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D) — [RCA Template chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-12. Document Power Automate Flow to send MS Teams messages on RCA
-13. Work on fleet engineering status report
-14. Create EPIC for MSTR User Profile Update script and Dashboard
-15. Create ticket and EPIC for AIX Bundle
-16. Create threads and tickets for DataOps Automation and ADINC Code review
-17. Reply to MSTR on CIDR for Upgrade and Container-based architecture
-18. Review Updated ADINC Metrics with Vijay and confirm their inclusion in the DBX dashboard
-19. Coordinate with Deepthi Konda on the infrastructure request once the OAuth/Jira-admin prerequisites are ready
-20. Contact Ritika to fix [DATAINF board](https://deept.atlassian.net/jira/software/projects/DATAINF/apps/94d5de1a-112d-4549-bd03-5f910d5fd27b/880424a7-af14-4c77-b446-5ef9feee797a/structure/board/4256) and add ADIA project
-21. Schedule a meeting with Frank and Darren to align on Ps and INC metrics
-22. Create a list of initiatives for SKRULL and ADIA for CAPEX work
-23. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
-24. Align on MTTR, MTTM and MTTD components with Tech Ops
-25. Work on a solution to include timestamps in fields that are currently date-only
-26. Work on a new prioritization matrix based on Impact and Urgency
+8. ~~Continue conversation and agreements about ADINC and RCA with Chris and DEV team~~ — [ADINC & RCA agreements chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D) — [RCA Template chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+9. ~~Document Power Automate Flow to send MS Teams messages on RCA~~
+10. ~~Create EPIC for MSTR User Profile Update script and Dashboard~~
+11. ~~Create ticket and EPIC for AIX Bundle~~
+12. ~~Create threads and tickets for DataOps Automation and ADINC Code review~~
+13. ~~Reply to MSTR on CIDR for Upgrade and Container-based architecture~~
+14. ~~Review Updated ADINC Metrics with Vijay and confirm their inclusion in the DBX dashboard~~
+15. ~~Contact Ritika to fix [DATAINF board](https://deept.atlassian.net/jira/software/projects/DATAINF/apps/94d5de1a-112d-4549-bd03-5f910d5fd27b/880424a7-af14-4c77-b446-5ef9feee797a/structure/board/4256) and add ADIA project~~
+16. ~~Schedule a meeting with Frank and Darren to align on Ps and INC metrics~~
+17. ~~Align on MTTR, MTTM and MTTD components with Tech Ops~~
+18. ~~Work on a solution to include timestamps in fields that are currently date-only~~
+19. ~~Work on a new prioritization matrix based on Impact and Urgency~~
+20. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
+21. **In progress** Schedule MSTR Oct ONE Update
+22. **In progress** Establish guidelines to approve DataOps Monitors in PRD
+23. Work on fleet engineering status report
+24. Coordinate with Deepthi Konda on the infrastructure request once the OAuth/Jira-admin prerequisites are ready
+25. Create a list of initiatives for SKRULL and ADIA for CAPEX work
+26. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
 27. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
 28. Investigate the MSTR Lambda CI/CD options with Infra team
 29. Move DBX Incident Dashboard to shared space (out of personal folders)
@@ -57,6 +57,6 @@
 
 ## Summary
 
-**Done:** 1, 2, 3, 4, 5, 6, 7  
-**In progress:** 8, 9, 10, 11  
-**Open:** 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19  
+**In progress:** 20, 21, 22  
+**Open:** 23, 24, 25, 26, 27, 28, 29
