@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-23  
-**Next item number:** 30
+**Next item number:** 31
 
 ## Rules
 
@@ -52,6 +52,7 @@
 27. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
 28. Investigate the MSTR Lambda CI/CD options with Infra team
 29. Move DBX Incident Dashboard to shared space (out of personal folders)
+30. Add SKRULL and ADIA TRPs into Foundation Engineering - Q2 Eng Led Items — [Google Sheets](https://docs.google.com/spreadsheets/d/1B0wQEhwUKwdfyIw-17h7L0sexx1vD9ld6YTW6ouNpJk/edit?gid=0#gid=0)
 
 ---
 
@@ -59,4 +60,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19  
 **In progress:** 20, 21, 22  
-**Open:** 23, 24, 25, 26, 27, 28, 29
+**Open:** 23, 24, 25, 26, 27, 28, 29, 30
