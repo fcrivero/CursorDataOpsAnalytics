@@ -1,7 +1,7 @@
 # November List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-11-16  
+**Last updated:** 2026-11-23  
 **Next item number:** 30
 
 ## Rules
@@ -29,12 +29,12 @@
 4. ~~Complete AI team sheet~~ — [Teams chat](https://teams.microsoft.com/l/chat/19%3Aaf12d328b53046fd998dc0a0897d3c99%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
 5. ~~Provide feedback to Peter and Michelle~~
 6. ~~Review/update DataOps skills with Dmytro~~
-7. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-8. **In progress** Schedule MSTR Oct ONE Update
-9. **In progress** Establish guidelines to approve DataOps Monitors in PRD
-10. **In progress** Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [ADINC & RCA agreements chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D) — [RCA Template chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
-11. Document Power Automate Flow to send MS Teams messages on RCA
-12. Plan SKRULL roadmap
+7. ~~Plan SKRULL roadmap~~
+8. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
+9. **In progress** Schedule MSTR Oct ONE Update
+10. **In progress** Establish guidelines to approve DataOps Monitors in PRD
+11. **In progress** Continue conversation and agreements about ADINC and RCA with Chris and DEV team — [ADINC & RCA agreements chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YTAzODFhNDgtMGFlNC00YjQ5LWFlY2QtNDRiMjBjNTJkZmVk%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D) — [RCA Template chat](https://teams.microsoft.com/l/chat/19%3Ameeting_YWFkNjI5ZDgtOWI4NS00ZGE3LWEzNDgtZjExOWI5OGEwZGQx%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+12. Document Power Automate Flow to send MS Teams messages on RCA
 13. Work on fleet engineering status report
 14. Create EPIC for MSTR User Profile Update script and Dashboard
 15. Create ticket and EPIC for AIX Bundle
@@ -57,6 +57,6 @@
 
 ## Summary
 
-**Done:** 1, 2, 3, 4, 5, 6  
-**In progress:** 7, 8, 9, 10  
-**Open:** 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+**Done:** 1, 2, 3, 4, 5, 6, 7  
+**In progress:** 8, 9, 10, 11  
+**Open:** 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
