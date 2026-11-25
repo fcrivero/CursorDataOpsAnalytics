@@ -2,7 +2,7 @@
 
 **Owner:** Fernando Rivero  
 **Last updated:** 2026-11-25  
-**Next item number:** 37
+**Next item number:** 38
 
 ## Rules
 
@@ -59,6 +59,7 @@
 34. Clarify from MSTR vendor effort and timeline for container-based migration
 35. Update ADINC support bot and corresponding skills with changes to allow list — [MS Thread: Manually Backfilling ADINC Tickets | ads-data-bi-support](https://teams.microsoft.com/l/message/19:d8264169c3d34e6182652bda83c14e57@thread.tacv2/1795567233628?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=00792fe9-ce40-4530-9561-d415894f214f&parentMessageId=1795567233628&teamName=ads-data-bi-support&channelName=ads-data-bi-support)
 36. Plan Thanksgiving and Christmas on-call availability and SKRULL/Analytics holiday coverage
+37. Send notes and questions to MSTR vendor for container-based planning
 
 ---
 
@@ -66,4 +67,4 @@
 
 **Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21  
 **In progress:** 22, 23, 24  
-**Open:** 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+**Open:** 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37
