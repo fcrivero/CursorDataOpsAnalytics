@@ -1,7 +1,7 @@
 # November List — Daily Activity & Todo Log
 
 **Owner:** Fernando Rivero  
-**Last updated:** 2026-11-23  
+**Last updated:** 2026-11-25  
 **Next item number:** 37
 
 ## Rules
@@ -42,21 +42,21 @@
 17. ~~Align on MTTR, MTTM and MTTD components with Tech Ops~~
 18. ~~Work on a solution to include timestamps in fields that are currently date-only~~
 19. ~~Work on a new prioritization matrix based on Impact and Urgency~~
-20. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
-21. **In progress** Schedule MSTR Oct ONE Update
-22. **In progress** Establish guidelines to approve DataOps Monitors in PRD
-23. Work on fleet engineering status report
-24. Coordinate with Deepthi Konda on the infrastructure request once the OAuth/Jira-admin prerequisites are ready
-25. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
-26. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
-27. Investigate the MSTR Lambda CI/CD options with Infra team
-28. Move DBX Incident Dashboard to shared space (out of personal folders)
-29. Add SKRULL and ADIA TRPs into Foundation Engineering - Q2 Eng Led Items — [Google Sheets](https://docs.google.com/spreadsheets/d/1B0wQEhwUKwdfyIw-17h7L0sexx1vD9ld6YTW6ouNpJk/edit?gid=0#gid=0)
-30. Schedule meeting with Arif to discuss MSTR container-based migration
-31. Schedule meeting with Riyaz and Praveen Alur to discuss MSTR container-based migration
-32. Clarify from MSTR vendor effort and timeline for container-based migration
-33. Provide feedback to Interview || Manjunath
-34. Provide feedback to Interview || Sai Naveen
+20. ~~Provide feedback to Interview || Manjunath~~
+21. ~~Provide feedback to Interview || Sai Naveen~~
+22. **In progress** Follow up with Praveen on Monte Carlo standard and documentation — [Runbook](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2948473708/Monte+Carlo+DQ+Alerts+Runbook) — [Confluence: Monitor Details](https://disney-enterprise.atlassian.net/wiki/spaces/adtargeting/pages/2908684289/ADM+Measurement+Monte+Carlo+DQ+Monitors+PM+Catalog) — [Monte Carlo Monitors: Measurement Domain](https://disneyap.getmontecarlo.com/monitors)
+23. **In progress** Schedule MSTR Oct ONE Update
+24. **In progress** Establish guidelines to approve DataOps Monitors in PRD
+25. Work on fleet engineering status report
+26. Coordinate with Deepthi Konda on the infrastructure request once the OAuth/Jira-admin prerequisites are ready
+27. Check HTML dashboard new template — [Teams message](https://teams.microsoft.com/l/message/19:38c8ad96e3144959a8d028e938e0bd76@thread.v2/1794953753002?context=%7B%22contextType%22%3A%22chat%22%7D)
+28. Work on FY27 Q1 SOX — [DASB-11958](https://deept.atlassian.net/browse/DASB-11958)
+29. Investigate the MSTR Lambda CI/CD options with Infra team
+30. Move DBX Incident Dashboard to shared space (out of personal folders)
+31. Add SKRULL and ADIA TRPs into Foundation Engineering - Q2 Eng Led Items — [Google Sheets](https://docs.google.com/spreadsheets/d/1B0wQEhwUKwdfyIw-17h7L0sexx1vD9ld6YTW6ouNpJk/edit?gid=0#gid=0)
+32. Schedule meeting with Arif to discuss MSTR container-based migration
+33. Schedule meeting with Riyaz and Praveen Alur to discuss MSTR container-based migration — [MS Teams thread: Alur, Praveen, +3](https://teams.microsoft.com/l/chat/19%3Aa5be0e28b2db4b89a4151d2e4513d953%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D)
+34. Clarify from MSTR vendor effort and timeline for container-based migration
 35. Update ADINC support bot and corresponding skills with changes to allow list — [MS Thread: Manually Backfilling ADINC Tickets | ads-data-bi-support](https://teams.microsoft.com/l/message/19:d8264169c3d34e6182652bda83c14e57@thread.tacv2/1795567233628?tenantId=56b731a8-a2ac-4c32-bf6b-616810e913c6&groupId=00792fe9-ce40-4530-9561-d415894f214f&parentMessageId=1795567233628&teamName=ads-data-bi-support&channelName=ads-data-bi-support)
 36. Plan Thanksgiving and Christmas on-call availability and SKRULL/Analytics holiday coverage
 
@@ -64,6 +64,6 @@
 
 ## Summary
 
-**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19  
-**In progress:** 20, 21, 22  
-**Open:** 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+**Done:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21  
+**In progress:** 22, 23, 24  
+**Open:** 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
